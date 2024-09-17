@@ -1,6 +1,6 @@
 #include <iostream>
 #include "include/cutscenes.h"
-#include "include/cards.h"
+#include "include/cards.hpp"
 
 int main() {
 	/*
