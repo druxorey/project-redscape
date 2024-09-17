@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/cards.h"
+#include "include/cards.hpp"
 
 int main() {
 	card deck[DECKSIZE];

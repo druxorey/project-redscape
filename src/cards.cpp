@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/cards.h"
+#include "../include/cards.hpp"
 
 void initialize_deck(card *deck) {
 	for (int i = 0, j = DECKSIZE / TYPENUM; i < j; i++) {

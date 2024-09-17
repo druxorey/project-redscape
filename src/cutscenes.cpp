@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/cutscenes.h"
+#include "../include/cutscenes.hpp"
 
 int print_image(const char *dir) {
 
