@@ -1,6 +1,13 @@
 # Todo List
 
-- [ ] Create a bash script to automate the process of compiling and running the game in C++.
+- [ ] Structure the file directory.
+- [ ] Create a function to be able to clean the screen independently of the OS.
+- [ ] Prestige system and how it will influence history.
+- [ ] Write the general script of the story.
+- [ ] Make the visual art for the card game.
+- [ ] Create the menu system and the TUI to interact with the game.
+
+- [x] Create a bash script to automate the process of compiling and running the game in C++.
 
 # Development Guide
 
