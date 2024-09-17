@@ -1,3 +1,7 @@
+# Todo List
+
+- [ ] Create a bash script to automate the process of compiling and running the game in C++.
+
 # Development Guide
 
 ## Variable Naming
