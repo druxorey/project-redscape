@@ -22,10 +22,50 @@ void generate_hand(card *deck, card *hand);
 // given a deck, return an input to an available card
 int get_card(card *deck);
 
-// prints the given card in the screen, without line feed character
+// given a type (0 .. 3), returns a pointer to string literal containing the symbol of the type
+const char *to_symbol(int type);
+//
+// given a card number value (1 .. 13), returns a pointer to string literal containing the number or the letter of the card
+const char *to_letter(int n);
+
+/* prints the given card in the screen, with this format:
+┌──────────────┐
+│ 10 ♣         │
+│  ┌────────┐  │
+│  │        │  │
+│  │        │  │
+│  │        │  │
+│  │        │  │
+│  │        │  │
+│  │        │  │
+│  └────────┘  │
+│         ♣ 10 │
+└──────────────┘
+
+*/
 void print_card(card);
 
-// prints the given cards horizontally in the screen, without line feed character
+/* prints a reversed card in the screen, with this format:
+┌──────────────┐
+│# # # # # # # │
+│ # # # # # # #│
+│# # # # # # # │
+│ # # # # # # #│
+│# # # # # # # │
+│ # # # # # # #│
+│# # # # # # # │
+│ # # # # # # #│
+│# # # # # # # │
+│ # # # # # # #│
+└──────────────┘
+
+*/
+void print_rcard();
+
+// prints the given cards horizontally in the screen
 // the second arguments is the number of cards inside the array
 void print_cards(card [], unsigned int);
+
+// prints the given number of reversed cards horizontally in the screen
+void print_rcards(unsigned int);
 
