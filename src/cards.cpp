@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/cards.hpp"
+#include "../include/cutscenes.hpp"
 
 void initialize_deck(card *deck) {
 	for (int i = 0, j = DECKSIZE / TYPENUM; i < j; i++) {
@@ -12,6 +13,7 @@ void initialize_deck(card *deck) {
 }
 
 void generate_hand(card *deck, card *hand) {
+	srand(time(NULL));
 	int randcard;
 	for (int i = 0; i < HANDSIZE; ) {
 		randcard = rand() % DECKSIZE;
@@ -26,11 +28,24 @@ void generate_hand(card *deck, card *hand) {
 }
 
 int get_card(card *deck) {
-	int randcard = rand() % DECKSIZE;
-	if (deck[randcard].chosen == false) {
-		deck[randcard].chosen = true;
-		return randcard;
+	srand(time(NULL));
+	int randcard, i;
+	for (i = 0; i < DECKSIZE; i++) {
+		randcard = rand() % DECKSIZE;
+		if (deck[randcard].chosen == false) {
+			deck[randcard].chosen = true;
+			return randcard;
+		}
 	}
+	// the probability of this code being executed is probably less than the 
+	// probability of being hit by a lightning bolt, but just in case
+
+	for (i = 0; i < DECKSIZE; i++)
+		if (deck[i].chosen == false) {
+			deck[i].chosen = true;
+			return randcard;
+		}
+
 	return -1;
 }
 
@@ -98,6 +113,27 @@ void print_card(card c) {
 	);
 }
 
+void print_scard(card c) {
+	const char *n = to_letter(c.value);
+	const char *s = to_symbol(c.type);
+	int p = c.value != 10;
+
+	printf("%s %s %s%*s         %s         %2s %s %s",
+	"┏━━━━━━━━━━━━━━┓\n"
+	"┃", n,s,p,"", "┃\n"
+	"┃  ┏━━━━━━━━┓  ┃\n"
+	"┃  ┃        ┃  ┃\n"
+	"┃  ┃        ┃  ┃\n"
+	"┃  ┃        ┃  ┃\n"
+	"┃  ┃        ┃  ┃\n"
+	"┃  ┃        ┃  ┃\n"
+	"┃  ┃        ┃  ┃\n"
+	"┃  ┗━━━━━━━━┛  ┃\n"
+	"┃",     n, s, "┃\n"
+	"┗━━━━━━━━━━━━━━┛\n"
+	);
+}	 	 
+
 void print_rcard() {
 	printf("%s",
 	"┌──────────────┐\n"
@@ -117,49 +153,117 @@ void print_rcard() {
 
 void print_cards(card c[], unsigned int n) {
 	int i, j, p;
+	int card_render_width = 16;
+	int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;
 
+	printf("%*s", padding, "");
 	for (i = 0; i < n; i++)
-		printf("%s ", "┌──────────────┐");
-	printf("\n");
+		if (c[i].chosen)
+			printf("%s ", "┏━━━━━━━━━━━━━━┓");
+		else
+			printf("%s ", "┌──────────────┐");
+	printf("\n%*s", padding, "");
 	for (i = 0; i < n; i++) {
 		p = c[i].value != 10;
-		printf("%s %s %s%*s         %s ", "│", to_letter(c[i].value), to_symbol(c[i].type), p, "", "│");
+		if (c[i].chosen)
+			printf("%s %s %s%*s         %s ", "┃", to_letter(c[i].value), to_symbol(c[i].type), p, "", "┃");
+		else
+			printf("%s %s %s%*s         %s ", "│", to_letter(c[i].value), to_symbol(c[i].type), p, "", "│");
+
 	}
-	printf("\n");
+	printf("\n%*s", padding, "");
 	for (i = 0; i < n; i++)
-		printf("%s ", "│  ┌────────┐  │");
-	printf("\n");
+		if (c[i].chosen)
+			printf("%s ", "┃  ┏━━━━━━━━┓  ┃");
+		else
+			printf("%s ", "│  ┌────────┐  │");
+	printf("\n%*s", padding, "");
 	for (i = 0; i < 6; i++) {
 		for (j = 0; j < n; j++)
-			printf("%s ", "│  │        │  │");
-		printf("\n");
+			if (c[j].chosen)
+				printf("%s ", "┃  ┃        ┃  ┃");
+			else
+				printf("%s ", "│  │        │  │");
+		printf("\n%*s", padding, "");
 	}
 	for (i = 0; i < n; i++)
-		printf("%s ", "│  └────────┘  │");
-	printf("\n");
+		if (c[i].chosen)
+			printf("%s ", "┃  ┗━━━━━━━━┛  ┃");
+		else
+			printf("%s ", "│  └────────┘  │");
+	printf("\n%*s", padding, "");
 	for (i = 0; i < n; i++)
-		printf("%s         %2s %s %s ", "│", to_letter(c[i].value), to_symbol(c[i].type), "│");
-	printf("\n");
+		if (c[i].chosen)
+			printf("%s         %2s %s %s ", "┃", to_letter(c[i].value), to_symbol(c[i].type), "┃");
+		else
+			printf("%s         %2s %s %s ", "│", to_letter(c[i].value), to_symbol(c[i].type), "│");
+	printf("\n%*s", padding, "");
 	for (i = 0; i < n; i++)
-		printf("%s ", "└──────────────┘");
+		if (c[i].chosen)
+			printf("%s ", "┗━━━━━━━━━━━━━━┛");
+		else
+			printf("%s ", "└──────────────┘");
+	printf("\n%*s", padding, "");
+	for (i = 0; i < n; i++)
+		printf("       %2d        ", i + 1);
 	printf("\n");
 }
 
 void print_rcards(unsigned int n) {
 	int i, j;
+	int card_render_width = 16;
+	int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;
 
+	printf("%*s", padding, "");
 	for (i = 0; i < n; i++)
 		printf("%s ", "┌──────────────┐");
-	printf("\n");
+	printf("\n%*s", padding, "");
 	for (i = 0; i < 10; i ++) {
 		for (j = 0; j < n; j++)
 			if (i % 2)
 				printf("%s ", "│ # # # # # # #│");
 			else
 				printf("%s ", "│# # # # # # # │");
-		printf("\n");
+		printf("\n%*s", padding, "");
 	}
 	for (i = 0; i < n; i++)
 		printf("%s ", "└──────────────┘");
 	printf("\n");
 }
+
+const char *get_points(int appearances, bool is_special, int *points) {
+	if (is_special && (appearances == 5)) {
+		*points += 12;
+		return "¡Quíntuple especial, 12 puntos (Máximo puntaje)!";
+	}
+	else if (is_special && (appearances == 4)) {
+		*points += 10;
+		return "¡Cuádruple especial, 10 puntos!";
+	}
+	else if (is_special && (appearances == 3)) {
+		*points += 7;
+		return "¡Triple especial, 7 puntos!";
+	}
+	else if (!is_special && (appearances == 5)) {
+		*points += 7;
+		return "¡Quíntuple, 7 puntos!";
+	}
+	else if (is_special && (appearances == 2)) {
+		*points += 5;
+		return "Pareja especial, 5 puntos.";
+	}
+	else if (!is_special && (appearances == 4)) {
+		*points += 5;
+		return "Cuádruple, 5 puntos.";
+	}
+	else if (!is_special && (appearances == 3)) {
+		*points += 3;
+		return "Triple, 3 puntos.";
+	}
+	else if (!is_special && (appearances == 2)) {
+		*points += 2;
+		return "Pareja, 2 puntos.";
+	}
+	else return NULL;
+}
+

@@ -43,6 +43,23 @@ const char *to_letter(int n);
 └──────────────┘
 
 */
+void print_scard(card);
+
+/* prints the given card in the screen (selected mode), with this format:
+┏━━━━━━━━━━━━━━┓
+┃ 10 ♣         ┃
+┃  ┏━━━━━━━━┓  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┗━━━━━━━━┛  ┃
+┃         ♣ 10 ┃
+┗━━━━━━━━━━━━━━┛
+
+*/
 void print_card(card);
 
 /* prints a reversed card in the screen, with this format:
@@ -69,3 +86,8 @@ void print_cards(card [], unsigned int);
 // prints the given number of reversed cards horizontally in the screen
 void print_rcards(unsigned int);
 
+// given a number of appearances, an "is_special" flag, and a pointer to an int, 
+// adds the corresponding number of points (based on the number of appearances,
+// and whether they're special or not) onto the integer pointer, and returns
+// a pointer to a string literal containing a dialogue for the number of points.
+const char *get_points(int, bool, int *);
