@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/cutscenes.h"
+#include "include/cutscenes.hpp"
 #include "include/cards.hpp"
 
 int main() {
