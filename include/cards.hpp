@@ -43,6 +43,23 @@ const char *to_letter(int n);
 └──────────────┘
 
 */
+void print_scard(card);
+
+/* prints the given card in the screen (selected mode), with this format:
+┏━━━━━━━━━━━━━━┓
+┃ 10 ♣         ┃
+┃  ┏━━━━━━━━┓  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┃        ┃  ┃
+┃  ┗━━━━━━━━┛  ┃
+┃         ♣ 10 ┃
+┗━━━━━━━━━━━━━━┛
+
+*/
 void print_card(card);
 
 /* prints a reversed card in the screen, with this format:

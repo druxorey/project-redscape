@@ -29,8 +29,6 @@ int print_dialogue(const char *dialogue) {
 		}
 
 	printf("\n%*c%s\n", (MAXLINE - size) / 2, ' ', dialogue);
-	getchar();
-
 	return 0;
 }	
 
