@@ -1,7 +1,10 @@
 CC=g++
 CFLAGS=-I include
-OBJS= main.o cards.o cutscenes.o
+OBJS= main.o cards.o cutscenes.o utils.o
 BUILD_DIR = build
+
+start: $(BUILD_DIR)/redscape
+	$(BUILD_DIR)/redscape
 
 all: $(BUILD_DIR) $(addprefix $(BUILD_DIR)/, $(OBJS))
 	$(CC) -o $(BUILD_DIR)/redscape $(addprefix $(BUILD_DIR)/, $(OBJS))
@@ -17,6 +20,9 @@ $(BUILD_DIR)/cards.o: src/cards.cpp
 
 $(BUILD_DIR)/cutscenes.o: src/cutscenes.cpp
 	$(CC) $(CFLAGS) -c src/cutscenes.cpp -o $@
+
+$(BUILD_DIR)/utils.o: src/utils.cpp
+	$(CC) $(CFLAGS) -c src/utils.cpp -o $@
 
 clean:
 	rm -f $(BUILD_DIR)/*.o $(BUILD_DIR)/redscape

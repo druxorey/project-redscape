@@ -20,8 +20,12 @@ int print_image(const char *dir) {
 
 int print_dialogue(const char *dialogue) {
 
-	int size = 0;
+	if (dialogue == NULL) {
+		fprintf(stderr, "%s %d %s", "Couldn't print the dialogue. NULL pointer given.");
+		return -1;
+	}
 
+	int size = 0;
 	while (dialogue[size++])
 		if (size > MAXLINE) {
 			fprintf(stderr, "%s %d %s", "Couldn't print the dialogue. It must be lesser than", MAXLINE, "characters.");
@@ -30,7 +34,7 @@ int print_dialogue(const char *dialogue) {
 
 	printf("\n%*c%s\n", (MAXLINE - size) / 2, ' ', dialogue);
 	return 0;
-}	
+}
 
 int print_cutscene(scene *cutscene, int n) {
 
