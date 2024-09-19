@@ -30,12 +30,18 @@ int main() {
 	srand(time(NULL));
 	generate_hand(deck, player_hand);
 	generate_hand(deck, enemy_hand);
+	/*
 
 	for(i = 0; i < HANDSIZE; i++)
 		printf("\n%d ENEMIGO: value: %d, type: %d\n", i + 1, enemy_hand[i].value, enemy_hand[i].type);
 
 	for(i = 0; i < HANDSIZE; i++)
 		printf("\n%d JUGADOR: value: %d, type: %d\n", i + 1, player_hand[i].value, player_hand[i].type);
+	*/
+
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE);
+	print_card(player_hand[0]);
 
 	printf("\n%s%d%s\n", "Selecciona una carta que quieras cambiar (1 ... ", HANDSIZE, "). Presiona ENTER/ANY cuando estés listo/a");
 	
@@ -82,10 +88,10 @@ int main() {
 	
 	printf("%s\n", "NORMAL APEARANCES (NOT REPETITIONS)");
 	for (i = 0; i < TYPENUM; i++)
-		printf("%d ", normal[i]);
-	printf("%s\n", "SPECIAL APEARANCES (NOT REPETITIONS)");
+		printf("\"%d\" ", normal[i]);
+	printf("\n%s\n", "SPECIAL APEARANCES (NOT REPETITIONS)");
 	for (i = 1; i < DECKSIZE / TYPENUM + 1; i++)
-		printf("%d ", special[i]);
+		printf("\"%d\" ", special[i]);
 	printf("\n");
 
 	// This version doesn't work, but it was supposed to waste less memory
