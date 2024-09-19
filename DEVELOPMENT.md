@@ -6,6 +6,7 @@
 - [ ] Write the general script of the story.
 - [ ] Make the visual art for the card game.
 - [ ] Create the menu system and the TUI to interact with the game.
+- [ ] Create a welcome screen to configure the terminal font-size.
 
 - [x] Create a bash script to automate the process of compiling and running the game in C++.
 
