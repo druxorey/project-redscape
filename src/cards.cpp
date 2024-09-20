@@ -151,7 +151,7 @@ void print_rcard() {
 	);
 }
 
-void print_cards(card c[], unsigned int n) {
+void print_cards(card c[], int n, bool numbers) {
 	int i, j, p;
 	int card_render_width = 16;
 	int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;
@@ -203,13 +203,16 @@ void print_cards(card c[], unsigned int n) {
 			printf("%s ", "┗━━━━━━━━━━━━━━┛");
 		else
 			printf("%s ", "└──────────────┘");
-	printf("\n%*s", padding, "");
-	for (i = 0; i < n; i++)
-		printf("       %2d        ", i + 1);
+
+	if (numbers) {
+		printf("\n%*s", padding, "");
+		for (i = 0; i < n; i++)
+			printf("       %2d        ", i + 1);
+	}
 	printf("\n");
 }
 
-void print_rcards(unsigned int n) {
+void print_rcards(int n) {
 	int i, j;
 	int card_render_width = 16;
 	int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;

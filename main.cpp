@@ -19,8 +19,8 @@ int main() {
 	// rendering of the current state
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-	print_cards(player_hand, HANDSIZE);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+	print_cards(player_hand, HANDSIZE, true);
 
 	// asking the user to pick cards
 	char c, pick_cards_dialogue[93];
@@ -33,8 +33,8 @@ int main() {
 		
 		clear();
 		print_rcards(HANDSIZE);
-		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-		print_cards(player_hand, HANDSIZE);
+		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+		print_cards(player_hand, HANDSIZE, true);
 		print_dialogue(pick_cards_dialogue);
 		getchar();
 	}
@@ -55,8 +55,8 @@ int main() {
 
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-	print_cards(player_hand, HANDSIZE);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+	print_cards(player_hand, HANDSIZE, true);
 		
 	// BEGIN COMPARISON OF YOUR CARDS AND ENEMY'S. THE ONE WITH MORE POINTS WINS THE ROUND.
 	int special[DECKSIZE / TYPENUM + 1] = {0};
@@ -75,8 +75,8 @@ int main() {
 		if ((points_dialogue = get_points(special[i], true, &points)) != NULL) {
 			clear();
 			print_rcards(HANDSIZE);
-			printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-			print_cards(player_hand, HANDSIZE);
+			printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
 			getchar();
 		}
@@ -85,8 +85,8 @@ int main() {
 		if ((points_dialogue = get_points(normal[i], false, &points)) != NULL) {
 			clear();
 			print_rcards(HANDSIZE);
-			printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-			print_cards(player_hand, HANDSIZE);
+			printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
 			getchar();
 		}
@@ -96,11 +96,48 @@ int main() {
 		
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-	print_cards(player_hand, HANDSIZE);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+	print_cards(player_hand, HANDSIZE, true);
 
 	sprintf(total_points_dialogue, "Total: %d", points);
 	print_dialogue(total_points_dialogue);
+
+	// Calculate enemy's points
+	for (i = 0; i < HANDSIZE; i++)
+		normal[i] = special[i] = 0;
+
+	for (i = 0; i < HANDSIZE; i++) {
+		special[enemy_hand[i].value]++;
+		normal[enemy_hand[i].type]++;
+	}
+
+	// NOTE: It can only happen that an appearance is whether normal or special
+	// NOT both at the same time, since 2 cards can't share the same type and number
+
+	int enemy_points = 0;
+	for (i = 1; i < (DECKSIZE / TYPENUM + 1); i++)
+		get_points(special[i], true, &enemy_points);
+	for (i = 0; i < TYPENUM; i++)
+		get_points(normal[i], false, &enemy_points);
+
+	// Reveal enemy's cards
+
+	const char *card_reveal_dialogue;
+	if (points < enemy_points)
+		card_reveal_dialogue = "Muajuajuajuajuajuajua... You're so noob lmao I've won, retire or something";
+	else
+		card_reveal_dialogue = "Alright, let's see...";
+	
+	clear();
+	print_rcards(HANDSIZE);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue(card_reveal_dialogue);
+
+	clear();
+	print_cards(enemy_hand, HANDSIZE, false);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
+	print_cards(player_hand, HANDSIZE, true);
 	
 	return 0;
 }

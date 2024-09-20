@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I include
+CFLAGS=-I include -Wall
 OBJS= main.o cards.o cutscenes.o utils.o
 BUILD_DIR = build
 

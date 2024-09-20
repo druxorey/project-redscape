@@ -80,11 +80,12 @@ void print_card(card);
 void print_rcard();
 
 // prints the given cards horizontally in the screen
-// the second arguments is the number of cards inside the array
-void print_cards(card [], unsigned int);
+// the second argument is the number of cards inside the array
+// set the third argument to true if you want card numbers, false if you don't
+void print_cards(card [], int, bool);
 
 // prints the given number of reversed cards horizontally in the screen
-void print_rcards(unsigned int);
+void print_rcards(int);
 
 // given a number of appearances, an "is_special" flag, and a pointer to an int, 
 // adds the corresponding number of points (based on the number of appearances,

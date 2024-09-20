@@ -21,7 +21,7 @@ int print_image(const char *dir) {
 int print_dialogue(const char *dialogue) {
 
 	if (dialogue == NULL) {
-		fprintf(stderr, "%s %d %s", "Couldn't print the dialogue. NULL pointer given.");
+		fprintf(stderr, "%s", "Couldn't print the dialogue. NULL pointer given.");
 		return -1;
 	}
 
