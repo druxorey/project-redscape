@@ -5,8 +5,8 @@
 void sleep(int miliseconds) {
     auto get_time = std::chrono::system_clock::now();
     auto get_time_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(get_time);
-    long long int actual_time = get_time_ms.time_since_epoch().count();
 
+    long long int actual_time = get_time_ms.time_since_epoch().count();
     long long int end_time = actual_time + miliseconds;
 
     while (actual_time < end_time) {
@@ -16,8 +16,15 @@ void sleep(int miliseconds) {
     }
 }
 
-
 void clear() {
-	for (int i = 0; i < 100; i++)
-		printf("%c", '\n');
+	printf(
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+		"\n\n\n\n\n\n\n\n\n\n"
+	);
 }
