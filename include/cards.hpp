@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 // The size of a deck, a hand, and the number of card types, change wisely.
 #define DECKSIZE 52
@@ -86,6 +87,9 @@ void print_cards(card [], int, bool);
 
 // prints the given number of reversed cards horizontally in the screen
 void print_rcards(int);
+
+// same as print_cards, but saves the output in a string
+std::string show_rcards(int);
 
 // given a number of appearances, an "is_special" flag, and a pointer to an int, 
 // adds the corresponding number of points (based on the number of appearances,
