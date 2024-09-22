@@ -17,14 +17,5 @@ void sleep(int miliseconds) {
 }
 
 void clear() {
-	printf(
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-	);
+	system("clear");
 }
