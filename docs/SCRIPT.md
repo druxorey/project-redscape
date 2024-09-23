@@ -4,28 +4,28 @@
 
 * El **AMIGO** jugará un rol muy importante en la historia, haciendo referencias a su padre en prisión, el cual luego será nuestro compañero en prisión sin saberlo, al final tendremos que decidir si traicionarlo o ayudarlo
 
+* Cuando comienza un juego aparece una pantalla estilo pokemon parpadeando blanco y negro
+
 ---
 # BLOQUE I - Caída en desgracia
 
-## **Prólogo**
-
-[Escena: La pantalla está en negro con sólo un borde delimitando los bordes del juego y los mensajes en el medio]
+[ESCENA: La pantalla está en negro con sólo un borde delimitando los bordes del juego y los mensajes en el medio]
 
  (Ring... Ring... Ring..)
 
 **FRIEND_NAME:** ¡DEFAULT_NAME! ¿Estás lista para mañana?
 
-**DEFAULT_NAME:** ¡Más que lista! Tengo un material buenísimo.
+**DEFAULT_NAME:** ¡De bolas que si! Tengo un material demasiado bueno.
 
-**FRIEND_NAME:** Ya sé, ya sé... pero... ¿estás segura de que quieres hacer ese chiste sobre el General?
+**FRIEND_NAME:** Perfecto... pero... ¿Estás segura de que quieres hacer ese chiste sobre EL GENERAL?
 
-**DEFAULT_NAME:** ¡Por supuesto! Es demasiado bueno para dejarlo pasar.
+**DEFAULT_NAME:** ¡Por supuesto! Es demasiado bueno, además no creo que pase algo grave, probablemente ni se entere.
 
-**FRIEND_NAME:** DEFAULT_NAME, no quiero ser aguafiestas, pero... ¿acaso se te olvida lo que le pasó a mi padre?
+**FRIEND_NAME:** DEFAULT_NAME, no quiero ser aguafiestas, pero... ¿Acaso se te olvida lo que le pasó a mi padre?
 
-**DEFAULT_NAME:** Oye, no me pongas así.
+**DEFAULT_NAME:** Si, yo sé, pero eso fue distinto, y fue hace mucho tiempo, ahora EL GENERAL parece estar más calmado, hace mucho que no escucho nada sobre él.
 
-**FRIEND_NAME:** Acaso se te olvida? en este mundo.... **TODO DEPENDE DEL PRESTIGIO**. No puedes ir por ahí haciendo chistes sobre cualquiera.
+**FRIEND_NAME:** ¿Acaso se te olvida? En este mundo.... **TODO DEPENDE DEL PRESTIGIO**, y menos aún de gente con tanto PRESTIGIO.
 
 **DEFAULT_NAME:** Tranquilo, sé lo que hago. No pasará nada.
 
@@ -39,15 +39,17 @@
 
 ---
 
-[Escena: Unas horas más tarde en un bar DEFAULT_NAME y FRIEND_NAME están sentados en una mesa, con varias cervezas vacías y una pizza gigante en el centro. Ahora si empiezan las cinemáticas en pantalla]
+**NARRADOR**: Unas horas más tarde en un bar DEFAULT_NAME y FRIEND_NAME están sentados en una mesa, con varias cervezas vacías y una pizza gigante en el centro.
+
+[Empiezan las cinemáticas reales]
 
 **FRIEND_NAME:** Bueno, sólo queda un pedazo de pizza y aún tengo hambre.
 
 **DEFAULT_NAME:** Pues que pena, yo también tengo hambre.
 
-**FRIEND_NAME:** Esto es un problema.... Ya sé! ¿Qué te parece si apostamos? Quien gane EL JUEGO, se come toda esta pizza.
+**FRIEND_NAME:** Esto es un problema.... Ya sé! ¿Qué te parece si apostamos? Quien gane una partida de EL JUEGO, se come toda esta pizza.
 
-**DEFAULT_NAME:** ¡Trato hecho! Pero... ¿cómo eran las reglas de EL JUEGO? Creo que necesito un repaso.
+**DEFAULT_NAME:** ¡Trato hecho! Pero... ¿Cómo eran las reglas de EL JUEGO? Creo que necesito un repaso.
 
 **FRIEND_NAME:** ¿No te acuerdas? Creo que tomaste demasiado.... Es fácil. Mira...
 
@@ -132,4 +134,66 @@ Al notar la mirada de DEFAULT_NAME, BAD_GUY_1 se levantó de la mesa y se acerc�
 * **Si DEFAULT_NAME gana:** BAD_GUY_4, con los ojos inyectados en sangre, dice: "¡Esto no ha terminado! Te haré pagar por esta humillación!"
 * **Si BAD_GUY_4 gana:** BAD_GUY_4 se jacta diciendo: "¡Soy el rey de este lugar! ¡Nadie me puede vencer!"
 
+**PRISION_FRIEND:** "¡Oye, tú! ¡Tienes un talento natural para el juego! Es una pena que hayas acabado en este lugar. ¿Qué hiciste para merecer esto?" 
 
+**NARRADOR**: DEFAULT_NAME, un poco desconcertada por el tono amistoso de PRISION_FRIEND, le contó brevemente su historia. PRISION_FRIEND escuchó atentamente, asintiendo con la cabeza de vez en cuando.
+
+**PRISION_FRIEND:** "Vaya, vaya. La vida es injusta a veces. Yo también tengo un hijo allá afuera. Espero que algún día pueda verlo de nuevo."
+
+**NARRADOR:** Pasaron varios días. DEFAULT_NAME se había adaptado a la vida en la prisión. Había aprendido las reglas no escritas, había forjado algunas alianzas y había ganado el respeto de muchos de los prisioneros. Sin embargo, la idea de pasar el resto de su vida entre rejas la atormentaba.
+
+Una noche, mientras jugaba una partida tranquila con PRISION_FRIEND, este le propuso un plan audaz.
+
+**PRISION_FRIEND:** "¿Qué te parecería si nos escapáramos de aquí?"
+
+**DEFAULT_NAME:** "¿Escapar? ¿Cómo? ¡Es imposible!"
+
+**PRISION_FRIEND:** "¡Nada es imposible! Con tu habilidad para EL JUEGO y mis conocimientos de la prisión, podemos lograrlo. La idea es simple: vamos a apostar contra los guardias y los funcionarios más importantes. Si ganamos suficiente prestigio, podremos apelar a un juicio contra EL GENERAL. Con un poco de suerte, podremos demostrar nuestra inocencia y salir de aquí." 
+
+**DEFAULT_NAME:** "Pero, ¿y si pierdo? Sería una sentencia de muerte inmediata para ambos."
+
+**PRISION_FRIEND:** "Siempre hay riesgos, pero creo que vale la pena intentarlo. Creo que podríamos empezar con Alejandro Baas. Ese tipo se ha vuelto cada vez más oscuro. Hace unos meses le ganó aquella partida a ese chico que hacía rap. El tipo terminó suicidándose, pero la mayoría cree que fue Alejandro que lo mató. Desde entonces, todos le temen."
+
+**DEFAULT_NAME:** "Sí, lo recuerdo. ¡Fue horrible! No puedo creer que lo hayan dejado salir ileso." 
+
+**PRISION_FRIEND:** "Exactamente. Si lo vencemos, no solo ganaremos prestigio, sino que también nos ganaremos el respeto de los demás prisioneros."
+
+**NARRADOR:** Con un plan en mente, DEFAULT_NAME y PRISION_FRIEND se acercaron a la mesa donde Alejandro Baas estaba jugando con otros prisioneros.
+
+**ALEJANDRO BAAS:** "¿Qué quieren, mocosos? ¿Otra partida más? ¡No me hagan reír!"
+
+**DEFAULT_NAME:** "Alejandro, tengo una propuesta para ti. Apuesto el 87% de mi prestigio a que te gano en una partida."
+
+**ALEJANDRO BAAS:**: Eres muy valiente, mocosa. Pero te advierto, si me ganas, te arrepentirás de haberme desafiado.
+
+**DEFAULT_NAME:** "Acepto tu apuesta."
+
+**[Transcurre el juego]**
+
+**NARRADOR:** La victoria sobre Alejandro Baas resonó por toda la prisión. El nombre de DEFAULT_NAME comenzó a susurrarse en los rincones más oscuros, llegando a oídos de los prisioneros más peligrosos. La reputación que había ganado a pulso la convertía en un objetivo tanto temido como deseado.
+
+Una noche, mientras DEFAULT_NAME descansaba en su celda, alguien llamó a la puerta. Con un nudo en el estómago, se levantó y abrió. Del otro lado, un tipo de aspecto rudo y amenazador la observaba fijamente.
+
+"Oye, tú, la que le ganó a Baas. Ven conmigo."
+
+Sin darle tiempo a reaccionar, el hombre la condujo por los oscuros pasillos hasta una celda con el número 23. Al entrar, se encontró con un hombre corpulento, con una mirada penetrante y una cicatriz que le cruzaba el rostro. Era La Vaca, uno de los prisioneros más temidos de la prisión.
+
+**LA VACA:** "Así que tú eres la famosa DEFAULT_NAME. Me han hablado mucho de ti. Dicen que eres muy buena en esto del juego."
+
+DEFAULT_NAME, tratando de mantener la calma, respondió: "Gracias por el cumplido. ¿Qué desea de mí?"
+
+**LA VACA:** "Quiero que trabajes conmigo. Tengo información valiosa que podría interesarte. Y créeme, puedo ofrecerte mucho más que ese viejo amigo tuyo."
+
+DEFAULT_NAME frunció el ceño. "No sé de qué me habla."
+
+**LA VACA:** "Vamos, no te hagas. Sé que quieres salir de aquí tanto como yo. Si trabajas conmigo, te ayudaré a conseguirlo. Pero si no... bueno, digamos que las cosas se podrían poner feas."
+
+DEFAULT_NAME se sintió acorralada. La Vaca tenía razón, necesitaba salir de allí. Pero no estaba dispuesta a aliarse con alguien tan peligroso.
+
+"Lo siento, pero no creo que podamos trabajar juntos."
+
+La sonrisa de La Vaca se desvaneció. "Muy bien, si no quieres ser mi aliada, entonces serás mi rival. Apuesto el 50% de mi prestigio a que no me ganas en una partida. Si pierdes, te mato."
+
+Sin más preámbulos, La Vaca sacó su baraja y la extendió sobre la mesa. DEFAULT_NAME, sabiendo que no tenía otra opción, aceptó el desafío.
+
+**[Comienza la partida]**
