@@ -231,7 +231,7 @@ void print_rcards(int n) {
 	}
 	for (i = 0; i < n; i++)
 		printf("%s ", "└──────────────┘");
-	printf("\n");
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 }
 
 const char *get_points(int appearances, bool is_special, int *points) {

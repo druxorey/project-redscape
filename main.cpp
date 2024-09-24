@@ -3,15 +3,50 @@
 #include "include/cards.hpp"
 #include "include/utils.hpp"
 
+int tutorial();
+
 int main() {
-	int i;
+	clear();
+	scene first_cutscene[] = 
+	{
+		{"assets/blank", "Ring... Ring... Ring.."},
+		{"assets/blank", "FRIEND_NAME: ¡DEFAULT_NAME! ¿Estás lista para mañana?"},
+		{"assets/blank", "DEFAULT_NAME: ¡De bolas que si! Tengo un material demasiado bueno."},
+		{"assets/blank", "FRIEND_NAME: Perfecto... pero... ¿Estás segura de que quieres hacer ese chiste sobre EL GENERAL?"},
+		{"assets/blank", "DEFAULT_NAME: ¡Por supuesto! Es demasiado bueno, además no creo que pase algo grave, probablemente ni se entere."},
+		{"assets/blank", "FRIEND_NAME: DEFAULT_NAME, no quiero ser aguafiestas, pero... ¿Acaso se te olvida lo que le pasó a mi padre?"},
+		{"assets/blank", "DEFAULT_NAME: Si, yo sé, pero eso fue distinto, y fue hace mucho tiempo, ahora EL GENERAL parece estar más calmado."},
+		{"assets/blank", "DEFAULT_NAME: Hace mucho que no escucho nada sobre él."},
+		{"assets/blank", "FRIEND_NAME: ¿Acaso se te olvida? En este mundo.... TODO DEPENDE DEL PRESTIGIO, y menos aún de gente con tanto PRESTIGIO."},
+		{"assets/blank", "DEFAULT_NAME: Tranquilo, sé lo que hago. No pasará nada."},
+		{"assets/blank", "FRIEND_NAME: Bueno, tú sabes. Solo quiero que tengas cuidado."},
+		{"assets/blank", "DEFAULT_NAME: Gracias por preocuparte."},
+		{"assets/blank", "FRIEND_NAME: Mucha suerte mañana."},
+		{"assets/blank", "(La necesitarás...)"},
+		{"assets/blank", "(Unas horas más tarde en un bar DEFNAME y FRIEND_NAME están sentados en una mesa, con varias cervezas vacías y una pizza gigante en el centro)."},
+		{"assets/bana", "FRIEND_NAME: Bueno, sólo queda un pedazo de pizza y aún tengo hambre."},
+		{"assets/chad", "DEFAULT_NAME: Pues que pena, yo también tengo hambre."},
+		{"assets/bana", "FRIEND_NAME: Esto es un problema.... Ya sé! ¿Qué te parece si apostamos? Quien gane una partida de EL JUEGO, se come toda esta pizza."},
+		{"assets/chad", "DEFAULT_NAME: ¡Trato hecho! Pero... ¿Cómo eran las reglas de EL JUEGO? Creo que necesito un repaso."},
+		{"assets/chad", "FRIEND_NAME: ¿No te acuerdas? Creo que tomaste demasiado.... Es fácil. Mira..."},
+	};
+
+	if (print_cutscene(first_cutscene, 20) == -1)
+		return -1;
+
+	tutorial();
 	
+	return 0;
+}
+
+int tutorial() {
 	// initialization of the game
 	card deck[DECKSIZE];
 	initialize_deck(deck);
 
 	card player_hand[HANDSIZE];
-	card enemy_hand[HANDSIZE];	
+	card enemy_hand[HANDSIZE];
+	card example_hand[HANDSIZE];
 
 	generate_hand(deck, player_hand);
 	generate_hand(deck, enemy_hand);
@@ -19,21 +54,59 @@ int main() {
 	// rendering of the current state
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: Cada uno tiene una mano aleatoria de cartas.");
+	enter();
+
+	clear();
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: Tienes que fijarte en que tengas varias cartas del mismo tipo, y/o con el mismo número.");
+	enter();
+
+	clear();
+	print_rcards(HANDSIZE);
+	example_hand[0] = {0, 3, 0};
+	example_hand[1] = {0, 12, 0};
+	print_cards(example_hand, 2, true);
+	print_dialogue("FRIEND_NAME: Por ejemplo, si tienes 2 cartas con el mismo tipo, se considera una pareja.");
+	enter();
+
+	clear();
+	print_rcards(HANDSIZE);
+	example_hand[0] = {3, 11, 0};
+	example_hand[1] = {1, 11, 0};
+	print_cards(example_hand, 2, true);
+	print_dialogue("FRIEND_NAME: Pero si tienen el mismo número, es una pareja especial, y vale más prestigio.");
+	enter();
+
+	clear();
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: Ya que tienes tus cartas, puedes decidir si cambiar algunas de ellas, o no.");
+	enter();
+
+	clear();
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: Por supuesto, con el riesgo de que te toquen cartas peores. Pero solo puedes cambiarlas una vez.");
+	enter();
 
 	// asking the user to pick cards
+	clear();
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE, true);
 	char c, pick_cards_dialogue[93];
 	sprintf(pick_cards_dialogue, "%s%d%s", "Selecciona una carta que quieras cambiar (1 ... ", HANDSIZE, "). Presiona ENTER cuando estés listo/a");
 	print_dialogue(pick_cards_dialogue);
 
+	int i;
 	while ((c = getchar()) != EOF && c != '\n' && c >= '1' && c <= HANDSIZE + '0') {
 		i = atoi(&c) - 1;
 		player_hand[i].chosen = !player_hand[i].chosen;
 		
 		clear();
 		print_rcards(HANDSIZE);
-		printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 		print_cards(player_hand, HANDSIZE, true);
 		print_dialogue(pick_cards_dialogue);
 		getchar();
@@ -55,8 +128,15 @@ int main() {
 
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: Ahora es momento de revelar cuantos puntos tiene cada uno.");
+	enter();
+
+	clear();
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: El que tenga más puntos se queda con esa misma cantidad de prestigio del rival.");
+	enter();
 		
 	// BEGIN COMPARISON OF YOUR CARDS AND ENEMY'S. THE ONE WITH MORE POINTS WINS THE ROUND.
 	int special[DECKSIZE / TYPENUM + 1] = {0};
@@ -75,20 +155,18 @@ int main() {
 		if ((points_dialogue = get_points(special[i], true, &points)) != NULL) {
 			clear();
 			print_rcards(HANDSIZE);
-			printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
-			getchar();
+			enter();
 		}
 	}
 	for (i = 0; i < TYPENUM; i++) {
 		if ((points_dialogue = get_points(normal[i], false, &points)) != NULL) {
 			clear();
 			print_rcards(HANDSIZE);
-			printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
-			getchar();
+			enter();
 		}
 	}
 
@@ -96,7 +174,6 @@ int main() {
 		
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 	print_cards(player_hand, HANDSIZE, true);
 
 	sprintf(total_points_dialogue, "Total: %d", points);
@@ -121,23 +198,23 @@ int main() {
 		get_points(normal[i], false, &enemy_points);
 
 	// Reveal enemy's cards
+	clear();
+	print_rcards(HANDSIZE);
+	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue("FRIEND_NAME: El que tenga más puntos se queda con esa misma cantidad de prestigio del rival.");
+	enter();
 
 	const char *card_reveal_dialogue;
 	if (points < enemy_points)
-		card_reveal_dialogue = "Muajuajuajuajuajuajua... You're so noob lmao I've won, retire or something";
+		card_reveal_dialogue = "FRIEND_NAME: Bueno, pareciera que aún se te da bien, menos mal porque TU VIDA DEPENDE DE EL JUEGO. Bueno, nos vamos ya? Te dejo en tu casa.";
 	else
-		card_reveal_dialogue = "Alright, let's see...";
+		card_reveal_dialogue = "FRIEND_NAME: Tienes que estar más atenta, recuerda que TU VIDA DEPENDE DE EL JUEGO. Bueno, nos vamos ya? Te dejo en tu casa.";
 	
 	clear();
 	print_rcards(HANDSIZE);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue(card_reveal_dialogue);
+	enter();
 
-	clear();
-	print_cards(enemy_hand, HANDSIZE, false);
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n"); // this should be done on a better way
-	print_cards(player_hand, HANDSIZE, true);
-	
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/cutscenes.hpp"
+#include "../include/utils.hpp"
 
 int print_image(const char *dir) {
 
@@ -38,9 +39,13 @@ int print_dialogue(const char *dialogue) {
 
 int print_cutscene(scene *cutscene, int n) {
 
-	for(int i = 0; i < n; i++)
-		if (print_image(cutscene[i].image) == -1 ||
-		print_dialogue(cutscene[i].dialogue) == -1)
+	for(int i = 0; i < n; i++) {
+		clear();
+		if (print_image(cutscene[i].image) != -1 && print_dialogue(cutscene[i].dialogue) != -1)
+			enter();
+		else
 			return -1;
+	}
+
 	return 0;
 }

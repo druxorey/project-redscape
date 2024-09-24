@@ -7,3 +7,6 @@ void sleep(int miliseconds);
 
 // clears the screen.
 void clear();
+
+// reads the standard input until a newline character is found.
+void enter();
