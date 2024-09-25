@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <chrono>
 
@@ -7,3 +8,6 @@ void sleep(int miliseconds);
 
 // clears the screen.
 void clear();
+
+// refreshes the screen at the given rate.
+void refresh(int rate);

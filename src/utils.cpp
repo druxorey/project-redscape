@@ -16,6 +16,13 @@ void sleep(int miliseconds) {
     }
 }
 
+
 void clear() {
 	system("clear");
+}
+
+
+void refresh(int rate) {
+	sleep(rate);
+	clear();
 }
