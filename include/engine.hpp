@@ -1,31 +1,72 @@
 #pragma once
+
 #include <iostream>
 #include <string>
-#include "../include/utils.hpp"
+#include <cmath>
 
 const int WIDTH_SCREEN = 150;
 const int HEIGHT_SCREEN = 49;
 
-// Function to get a dialog from a file
-std::string get_dialog(int dialog);
+// Gets the dialog on the line specified by dialog_index from the file '../assets/dialogue.txt'
+std::string get_dialog(int dialog_index);
 
-// Function to get a cutscene from a file
-std::string get_screen(std::string fileLocation);
+// Gets the contents of a scene file specified by file_location
+std::string get_cutscene(std::string file_location);
 
-// Function to print a default blanck screen
-void print_screen();
+// Convert a scene text string to a character array
+// The scene text string is passed as cutscene and the character array as matrix
+void cutscene_to_matrix(const std::string& cutscene, char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]);
 
-// This function converts a string into a matrix, the string has to have the same dimensions as the matrix, actually serve to get the cutscenes
-void string_to_matrix(const std::string& file, char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]);
+// Overwrite the target matrix with the overlay matrix
+// '_' characters in overlay_matrix become ' ' in target_matrix
+// ' ' characters in overlay_matrix are ignored and do not override the corresponding characters in target_matrix
+void overwrite_matrix(char target_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char overlay_matrix[HEIGHT_SCREEN][WIDTH_SCREEN]);
 
-// This function writes the object matrix into the screen matrix
-void write_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char object[HEIGHT_SCREEN][WIDTH_SCREEN]);
+// Print a character array to the console
+// If use_escape_codes is true, escape codes are used to format the text making the background white and the text black
+void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes = false);
 
-// This function prints the screen matrix
-void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]);
+// Draw a dialog in a character array
+// The dialog is passed as a text string and the position of the dialog is specified with a character ('u' for up, 'm' for middle, 'd' for down)
+void draw_dialog(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], std::string dialog, char position);
 
-// This function prints a dialog in the screen matrix
-void dialog_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], std::string dialog, char position);
+// Process a dialogue scene
+// The scene is specified with a file, the dialog is obtained with an index, the dialog position is specified with a character
+// The principal_matrix and dialog_matrix are used to draw the scene and dialogue
+// If use_escape_codes is true, escape codes are used to format the text making the background white and the text black
+void process_dialog_scene(const std::string& scene_file, int dialog_index, char dialog_position, char principal_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes = false);
 
-// better way to clear the screen and waiting a certain time
-void refresh(int rate);
+// Process a visual scene
+// The scene is specified with a file and the parentMatrix is used to draw the scene
+// If use_escape_codes is true, escape codes are used to format the text making the background white and the text black
+void process_visual_scene(const std::string& scene_file, char principal_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes = false);
+
+
+/* MAIN EXAMPLE
+
+int main() {
+	refresh(1000);
+	char matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
+	char overlay_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
+
+	while (true) {
+        process_dialog_scene("../assets/main-frame_1.txt", 1, 'd', matrix, overlay_matrix);
+        refresh(2500);
+        process_dialog_scene("../assets/main-frame_2.txt", 2, 'd', matrix, overlay_matrix);
+        refresh(2500);
+        process_dialog_scene("../assets/main-frame_3.txt", 3, 'd', matrix, overlay_matrix);
+        refresh(3000);
+        process_dialog_scene("../assets/main-frame_3.txt", 3, 'd', matrix, overlay_matrix);
+        refresh(2000);
+        process_visual_scene("../assets/main-frame_3.txt", matrix);
+        refresh(2000);
+        process_visual_scene("../assets/main-frame_4.txt", matrix, true);
+        refresh(250);
+        process_dialog_scene("../assets/main-frame_4.txt", 4, 'd', matrix, overlay_matrix);
+        refresh(3000);
+	}
+
+    return 0;
+}
+
+*/
