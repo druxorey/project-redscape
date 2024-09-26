@@ -16,19 +16,15 @@ void sleep(int miliseconds) {
 	}
 }
 
+
 void clear() {
-	printf(
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-		"\n\n\n\n\n\n\n\n\n\n"
-	);
+	system("clear");
+}
+
+
+void refresh(int rate) {
+	sleep(rate);
+	clear();
 }
 
 void enter() {

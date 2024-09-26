@@ -1,4 +1,5 @@
 #pragma once
+
 #include <iostream>
 #include <chrono>
 
@@ -10,3 +11,6 @@ void clear();
 
 // reads the standard input until a newline character is found.
 void enter();
+
+// refreshes the screen at the given rate.
+void refresh(int rate);
