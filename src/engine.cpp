@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "engine.hpp"
+#include "../include/engine.hpp"
 
 std::string get_dialog(int dialog_index) {
     FILE* file = fopen("../assets/dialogue.txt", "r");
