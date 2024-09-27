@@ -1,105 +1,179 @@
-Ring... Ring... Ring..
-**FRIEND_NAME:** ¡DEFAULT_NAME! ¿Estás lista para mañana?
-**DEFAULT_NAME:** ¡De bolas que si! Tengo un material demasiado bueno.
-**FRIEND_NAME:** Perfecto... pero... ¿Estás segura de que quieres hacer ese chiste sobre EL GENERAL?
-**DEFAULT_NAME:** ¡Por supuesto! Es demasiado bueno, además no creo que pase algo grave, probablemente ni se entere.
-**FRIEND_NAME:** DEFAULT_NAME, no quiero ser aguafiestas, pero... ¿Acaso se te olvida lo que le pasó a mi padre?
-**DEFAULT_NAME:** Si, yo sé, pero eso fue distinto, y fue hace mucho tiempo, ahora EL GENERAL parece estar más calmado, hace mucho que no escucho nada sobre él.
-**FRIEND_NAME:** ¿Acaso se te olvida? En este mundo.... TODO DEPENDE DEL PRESTIGIO, y menos aún de gente con tanto prestigio, ellos pueden hacer lo que sea siempre y cuando tengan más que tú.
-**DEFAULT_NAME:** Tranquilo, sé lo que hago. No pasará nada.
-**FRIEND_NAME:** Bueno, tú sabes. Solo quiero que tengas cuidado.
-**DEFAULT_NAME:** Gracias por preocuparte.
-**FRIEND_NAME:** Mucha suerte mañana.
-**NARRADOR**: *LA NECESITARÁS...*
-**NARRADOR**: *Unas horas más tarde en un bar DEFAULT_NAME y FRIEND_NAME están sentados en una mesa, con varias cervezas vacías y una pizza gigante en el centro.*
-**FRIEND_NAME:** Bueno, sólo queda un pedazo de pizza y aún tengo hambre.
-**DEFAULT_NAME:** Pues que pena, yo también tengo hambre.
-**FRIEND_NAME:** Esto es un problema.... ¡Ya sé! ¿Qué te parece si apostamos? Apuesto 10 de prestigio, quien gane una partida de EL JUEGO, se come toda esta pizza.
-**DEFAULT_NAME:** ¡Trato hecho! Pero... ¿Cómo eran las reglas de EL JUEGO? Creo que necesito un repaso.
-**FRIEND_NAME:** ¿No te acuerdas? Creo que tomaste demasiado.... Es fácil. Mira...
-* **Si DEFAULT_NAME gana:** Bueno, pareciera que aún se te da bien, menos mal porque TU VIDA DEPENDE DE EL JUEGO. Bueno, nos vamos ya? Te dejo en tu casa.
-* **Si FRIEND_NAME gana:** Tienes que estar más atenta, recuerda que TU VIDA DEPENDE DE EL JUEGO. Bueno, nos vamos ya? Te dejo en tu casa.
-**NARRADOR:**  *Pasaron unas horas. DEFAULT_NAME se encontraba en su cama, aún con la resaca de la noche anterior. FRIEND_NAME la había dejado en casa y ahora yacía sumida en un profundo sueño. De repente, un ruido ensordecedor la despertó sobresaltada. Antes de que pudiera reaccionar, una bolsa oscura cubrió su cabeza y unos fuertes brazos la levantaron y la trasladaron a otra habitación. Cuando la bolsa fue retirada, se encontró en su sala de estar, frente a una figura imponente.*
-**EL GENERAL:**  ¿Lista para jugar, comediante?
-**DEFAULT_NAME:** ¿Qué... qué está pasando? ¿Quién es usted?
-**EL GENERAL:**   ¿Acaso no reconoces mi voz? Soy el mismo al que ridiculizaste en tu espectáculo.
-**DEFAULT_NAME:** ...
-**EL GENERAL:**  Verás, me considero un hombre justo, así que te propondré algo, apuesto 1500 de prestigio, si tu ganas perderé el rango de General, sin embargo si yo gano.... CAERÁS AL ABISMO DE LA SOCIEDAD.
-**DEFAULT_NAME**: No tengo otra opción, ¿verdad?
-**EL GENERAL:** Exacto. EL JUEGO ha comenzado.
-**EL GENERAL:** Andando... Ya no eres un ser humano. 
-**NARRADOR:** *Con esas palabras, el General la condujo fuera de su casa.*
-**NARRADOR**: *Las pesadas puertas de hierro se cerraron con un estruendo ensordecedor, sumiendo a DEFAULT_NAME en una oscuridad absoluta. Tardó unos momentos en acostumbrarse a la penumbra, y cuando sus ojos se ajustaron, se encontró en un lugar que parecía más una pesadilla que una prisión. La arquitectura era extraña y opresiva: una torre helicoidal que se extendía hacia arriba, como un caracol gigante, con celdas diminutas incrustadas en sus paredes. Las paredes de piedra fría y húmeda estaban cubiertas de musgo y hongos, y el aire estaba viciado y olía a desagüe y a miedo.*
-*A medida que avanzaba por los oscuros corredores, el sonido de sus pasos resonaba con una intensidad que le helaba la sangre. La única luz provenía de unas pocas lámparas parpadeantes, que proyectaban sombras grotescas sobre las paredes. El lugar parecía un centro de tortura lúgubre, donde la muerte se respiraba en cada rincón. Las celdas estaban atestadas de prisioneros, hombres y mujeres de todas las edades y condiciones, sus rostros marcados por el sufrimiento y la desesperación.*
-*Mientras caminaba por ese lugar, DEFAULT_NAME se dio cuenta de que la gente apostaba sus pocas pertenencias. EL JUEGO parecía ser la única forma de entretenimiento y, al mismo tiempo, una moneda de cambio. Era una actividad que unía a los prisioneros, pero también los enfrentaba unos contra otros, creando una atmósfera de constante tensión.*
-**PRISION_FRIEND:** ¿Eres nueva por aquí, eh? Bienvenida al infierno. Realmente es como afuera, digamos que es una muestra en miniatura de la sociedad.... el más fuerte sobrevive. Y lo más importante, todo se decide con EL JUEGO. 
-**NARRADOR:** *PRISION_FRIEND hizo un gesto hacia un grupo de prisioneros reunidos alrededor de una mesa, donde se escuchaban risas y exclamaciones.*
-**PRISION_FRIEND:** Como ves, EL JUEGO es la ley. Aquí, el PRESTIGIO es más valioso que en el exterior. Si quieres sobrevivir, tendrás que aprender a jugar y a jugar bien. Y ten cuidado, porque muchos han perdido todo lo que tenían por una mala jugada.
-**NARRADOR:** *Mientras PRISION_FRIEND explicaba las reglas implícitas de la prisión, uno de los prisioneros que se encontraba en la mesa cercana los observaba con una mirada penetrante. Era un hombre corpulento, con una cicatriz que le cruzaba el rostro y unos ojos que transmitían una crueldad innata.* 
-**BAD_GUY_1:** ¡Oye tú, la nueva! ¿Qué miras? ¿Nunca has visto un juego de verdad? ¡Por aquí no vas a durar mucho! ¡Dentro de poco te veré muerta en la celda! ¿O te suicidarás antes de que te llegue la hora? 
-**DEFAULT_NAME:** ¿Y tú quién te crees para hablarme así? ¡No me subestimes!
-**BAD_GUY_1:** ¡Muy bien, mocosa! ¡Vamos a ver de qué estás hecha! Apuesto 50 de mi prestigio a que no me ganas ni una sola partida!
-**NARRADOR:** *Los demás prisioneros se acercaron, emocionados por la perspectiva de un buen espectáculo. DEFAULT_NAME, a pesar del miedo que sentía, aceptó el desafío. Sabía que esta era su oportunidad de demostrar su valía y de ganarse el respeto de los demás.*
-* **Si DEFAULT_NAME gana:** BAD_GUY_1, con los dientes apretados, dice: "¡Solo has tenido suerte esta vez, mocosa! No te confíes." 
-* **Si BAD_GUY_1 gana:** BAD_GUY_1 se ríe con crueldad y dice: "¡Lo ves! Aquí mandan los hombres de verdad, no las niñas como tú."
-* **Si DEFAULT_NAME gana:** BAD_GUY_2, frunciendo el ceño, dice: "¡No te creas tan importante! Solo has tenido un golpe de suerte."
-* **Si BAD_GUY_2 gana:** BAD_GUY_2 sonríe con superioridad y dice: "¡Así se hace! ¿Quién es la novata ahora?"
-* **Si DEFAULT_NAME gana:** BAD_GUY_3, con voz ronca, dice: "¡No te confíes, mocosa! La próxima vez no tendrás tanta suerte."
-* **Si BAD_GUY_3 gana:** BAD_GUY_3 se ríe a carcajadas y dice: "¡Ves, hasta yo puedo ganarte! ¡Qué decepción!"
-* **Si DEFAULT_NAME gana:** BAD_GUY_4, con los ojos inyectados en sangre, dice: "¡Esto no ha terminado! Te haré pagar por esta humillación!"
-* **Si BAD_GUY_4 gana:** BAD_GUY_4 se jacta diciendo: "¡Soy el rey de este lugar! ¡Nadie me puede vencer!"
-**PRISION_FRIEND:** "¡Oye, tú! ¡Tienes un talento natural para el juego! Es una pena que hayas acabado en este lugar. ¿Qué hiciste para merecer esto?" 
-**NARRADOR**: *DEFAULT_NAME, un poco desconcertada por el tono amistoso de PRISION_FRIEND, le contó brevemente su historia. PRISION_FRIEND escuchó atentamente, asintiendo con la cabeza de vez en cuando.*
-**PRISION_FRIEND:** Vaya, vaya. La vida es injusta a veces. Yo también tengo un hijo allá afuera. Espero que algún día pueda verlo de nuevo.
-**NARRADOR:** *Pasaron varios días. DEFAULT_NAME se había adaptado a la vida en la prisión. Había aprendido las reglas no escritas, había forjado algunas alianzas y había ganado el respeto de muchos de los prisioneros. Sin embargo, la idea de pasar el resto de su vida entre rejas la atormentaba. Una noche, mientras jugaba una partida tranquila con PRISION_FRIEND, este le propuso un plan audaz.*
-**PRISION_FRIEND:** ¿Qué te parecería si nos escapáramos de aquí?
-**DEFAULT_NAME:** ¿Escapar? ¿Cómo? ¡Es imposible!
-**PRISION_FRIEND:** ¡Nada es imposible! Con tu habilidad para EL JUEGO y mis conocimientos de la prisión y quienes están acá, podemos lograrlo. La idea es simple: vamos a apostar contra los guardias y los funcionarios más importantes. Si ganamos suficiente prestigio, podremos apelar a un juicio contra EL GENERAL. Con un poco de suerte, podremos demostrar nuestra inocencia y salir de aquí.
-**DEFAULT_NAME:** Pero, ¿y si pierdo? Sería una sentencia de muerte inmediata para ambos.
-**PRISION_FRIEND:** Siempre hay riesgos, pero creo que vale la pena intentarlo. Creo que podríamos empezar con Alejandro Baas. Ese tipo se ha vuelto cada vez más macabro. Hace unos meses le ganó aquella partida a ese chico que hacía rap. El tipo terminó suicidándose, pero la mayoría cree que fue Alejandro que lo mató. Desde entonces, todos le temen.
-**DEFAULT_NAME:** Creo que escuché el caso. ¡Fue horrible! No puedo creer que lo hayan dejado salir ileso.
-**PRISION_FRIEND:** Exactamente. Si lo vencemos, no solo ganaremos prestigio, sino que también nos ganaremos el respeto de los demás prisioneros.
-**NARRADOR:** *Con un plan en mente, DEFAULT_NAME y PRISION_FRIEND se acercaron a la mesa donde Alejandro Baas estaba jugando con otros prisioneros.*
-**ALEJANDRO BAAS:** ¿Qué quieren, mocosos? ¿Otra partida más? ¡No me hagan reír! Ya llevo 4 hoy y todas las he ganado..... Un momento, ¿Eres la nueva?, perfecto, carne nueva.
-**DEFAULT_NAME:** Alejandro, tengo una propuesta para ti. Apuesto 100 de mi prestigio a que te gano en una partida.
-**ALEJANDRO BAAS:**: Eres muy valiente, mocosa. Pero te advierto, si me ganas, me divertiré contigo preciosa.
-**DEFAULT_NAME:** Acepto tu apuesta.
-**NARRADOR:** *La victoria sobre Alejandro Baas resonó por toda la prisión. El nombre de DEFAULT_NAME comenzó a susurrarse en los rincones más oscuros, llegando a oídos de los prisioneros más peligrosos. La reputación que había ganado a pulso la convertía en un objetivo tanto temido como deseado.*
-*Una noche, mientras DEFAULT_NAME descansaba en su celda, alguien llamó a la puerta. Con un nudo en el estómago, se levantó y abrió. Del otro lado, un tipo de aspecto rudo y amenazador la observaba fijamente.*
-**PRISIONER_1:** Oye, tú, la que le ganó a Baas. Ven conmigo.
-**NARRADOR:** *Sin darle tiempo a reaccionar, el hombre la condujo por los oscuros pasillos hasta una celda con el número 23. Al entrar, se encontró con un hombre corpulento, con una mirada penetrante y una cicatriz que le cruzaba el rostro. Era La Vaca, uno de los prisioneros más temidos de la prisión.*
-**LA VACA:** Así que tú eres la famosa DEFAULT_NAME. Me han hablado mucho de ti. Dicen que eres muy buena en EL JUEGO.
-**DEFAULT_NAME:** Gracias por el cumplido. ¿Qué desea de mí?
-**LA VACA:** Quiero que trabajes conmigo. Tengo información valiosa que podría interesarte. Y créeme, puedo ofrecerte mucho más que ese viejo amigo tuyo.
-**DEFAULT_NAME:** No sé de qué me habla.
-**LA VACA**: ¿Segura? Parece ser que no sabes lo suficiente, ese tipo mató a la esposa de EL GENERAL hace muchos años, dejando a su hijo abandonado. ¿Quieres rodearte de alguien como él?
-**LA VACA:** Vamos, no te hagas. Sé que quieres salir de aquí tanto como yo. Si trabajas conmigo, te ayudaré a conseguirlo. Pero si no... bueno, digamos que las cosas se podrían poner feas.
-**DEFAULT_NAME:** Lo siento, pero no creo que podamos trabajar juntos.
-**LA VACA:** Muy bien, si no quieres ser mi aliada, entonces serás mi rival. Apuesto el 500 de mi prestigio a que no me ganas en una partida. Si pierdes, estarás muerta.
-**NARRADOR:** *Con esta victoria, DEFAULT_NAME había escalado aún más alto en la jerarquía de la prisión. Su nombre era conocido por todos, y su prestigio le abría las puertas a lugares antes inaccesibles.*
-**PRISION_FRIEND:** ¡Increíble! ¡Lo has vuelto a hacer! Ahora sí que estamos  encaminados hacia nuestra libertad.
-**DEFAULT_NAME:** Sí, pero también nos estamos metiendo en aguas muy profundas. No creo que haya vuelta atrás ahora.
-**PRISION_FRIEND:** Tienes razón. Pero si queremos salir de aquí, tenemos que arriesgarnos. Y tú eres la única que puede llevarnos a la victoria.
-**NARRADOR:** *Pasaron unos días. DEFAULT_NAME había acumulado suficiente prestigio para solicitar una audiencia con el juez. Con una mezcla de esperanza y nerviosismo, se dirigió a la sala de audiencias. Al llegar, se encontró con una guardia imponente llamada TEMPORAL_NAME.*
-**TEMPORAL_NAME:** Tú debes ser DEFAULT_NAME. ¿Qué quieres?"
-**DEFAULT_NAME:** Vengo a solicitar una audiencia con el juez. Tengo pruebas de mi inocencia.
-**TEMPORAL_NAME:** Lo siento, pero no puedes pasar. El juez no recibe a cualquiera.
-**DEFAULT_NAME:** Pero tengo el prestigio suficiente. ¡Tengo derecho a un juicio!
-**TEMPORAL_NAME:** Está bien, pero no me da la gana, ¿O acaso quieres apostar conmigo? Te recuerdo que el guardia más estúpido de esta prisión quintuplica tu prestigio.
-**DEFAULT_NAME:** Está bien, ¿Me crees imbécil? Te apuesto 750 de mi prestigio.
-**NARRADOR:** *DEFAULT_NAME se encontró en un dilema. Por un lado, sabía que necesitaba ganar la partida para poder salir de la prisión. Pero por otro lado, no quería arriesgar todo lo que había logrado. Sin embargo, la idea de pasar el resto de su vida entre rejas era insoportable.*
-**NARRADOR:** *Tras la trepidante victoria sobre la guardia corrupta, DEFAULT_NAME se adentró en un laberinto de esperas y trámites para finalmente obtener su audiencia. Los días se sucedieron, cada uno cargado de una ansiedad creciente. Finalmente, el día del juicio llegó.*
-*La sala era opresiva, con paredes de piedra fría y una atmósfera cargada de tensión. Al fondo, sentado en un estrado elevado, se encontraba EL GENERAL, el hombre que ostentaba el poder absoluto en la prisión. Su mirada, fría y calculadora, recorrió la sala hasta posarse en DEFAULT_NAME. El general parecía más enojado que nunca, la idea de que una simple prisionera lo hubiera desafiado tantas veces le revolvía las entrañas.*
-*La jueza, una mujer de voz firme y mirada penetrante, dio inicio al juicio.*
-**JUEZA:** DEFAULT_NAME, se te acusa de múltiples violaciones en contra de los poderes policiales. ¿Reconoces los cargos?
-**DEFAULT_NAME**: No reconozco que he infringido normas.
-**JUEZA:** GENERAL, ¿tiene algo que decir al respecto?
-**EL GENERAL:** Esta mujer es una amenaza para el orden establecido. Ha desafiado mi autoridad en repetidas ocasiones y ha incitado a la rebelión. Debe ser castigada.
-**JUEZA:** GENERAL, antes de emitir una sentencia, quiero darle a DEFAULT_NAME la oportunidad de demostrar su inocencia. ¿Estás dispuesto a aceptar un desafío?
-**EL GENERAL:** Por supuesto. Apuesto todo mi prestigio a que esta mujer no puede vencerme.
-**DEFAULT_NAME:** Acepto tu desafío, GENERAL. Apuesto el 100% de mi prestigio a que te ganaré en una partida.
-**JUEZA:** Muy bien. Que comience el juego.
-**EL GENERAL:** No puede ser... ¡Esto no es posible!
-**DEFAULT_NAME:** Lo siento, GENERAL, pero he ganado.
-**JUEZA:** GENERAL, por haber perdido, el 100% de tu PRESTIGIO pasará a DEFAULT_NAME, por lo que estás sentenciado a pena de muerte.
-**NARRADOR:** Con esta victoria, DEFAULT_NAME no solo había ganado su libertad, sino que también había cambiado el destino de toda la prisión. Su nombre sería recordado por siempre como el de la mujer que desafió al poder y lo venció.
+Ring..._Ring..._Ring..
+*FRIEND_NAME:*_¡DEFAULT_NAME!_¿Estás_lista_para_mañana?
+**DEFAULT_NAME:**_¡De_bolas_que_si!_Tengo_un_material_demasiado_bueno.
+**FRIEND_NAME:**_Perfecto..._pero..._¿Estás_segura_de_que_quieres_hacer_ese_chiste_sobre_EL_GENERAL?
+**DEFAULT_NAME:**_¡Por_supuesto!_Es_demasiado_bueno,_además_no_creo_que_pase_algo_grave,_probablemente_ni_se_entere.
+**FRIEND_NAME:**_DEFAULT_NAME,_no_quiero_ser_aguafiestas,_pero..._¿Acaso_se_te_olvida_lo_que_le_pasó_a_mi_padre?
+**DEFAULT_NAME:**_Si,_yo_sé,_pero_eso_fue_distinto,_y_fue_hace_mucho_tiempo,_ahora_EL_GENERAL_parece_estar_más_calmado
+hace_mucho_que_no_escucho_nada_sobre_él.
+**FRIEND_NAME:**_¿Acaso_se_te_olvida?_En_este_mundo...._TODO_DEPENDE_DEL_PRESTIGIO,_y_menos_aún_de_gente_con_tanto_prestigio
+ellos_pueden_hacer_lo_que_sea_siempre_y_cuando_tengan_más_que_tú.
+**DEFAULT_NAME:**_Tranquilo,_sé_lo_que_hago._No_pasará_nada.
+**FRIEND_NAME:**_Bueno,_tú_sabes._Solo_quiero_que_tengas_cuidado.
+**DEFAULT_NAME:**_Gracias_por_preocuparte.
+**FRIEND_NAME:**_Mucha_suerte_mañana.
+**NARRADOR**:_*LA_NECESITARÁS...*
+**NARRADOR**:_*Unas_horas_más_tarde_en_un_bar_DEFAULT_NAME_y_FRIEND_NAME_están_sentados_en_una_mesa
+con_varias_cervezas_vacías_y_una_pizza_gigante_en_el_centro.*
+**FRIEND_NAME:**_Bueno,_sólo_queda_un_pedazo_de_pizza_y_aún_tengo_hambre.
+**DEFAULT_NAME:**_Pues_que_pena,_yo_también_tengo_hambre.
+**FRIEND_NAME:**_Esto_es_un_problema...._¡Ya_sé!_¿Qué_te_parece_si_apostamos?_Apuesto_10_de_prestigio
+quien_gane_una_partida_de_EL_JUEGO,_se_come_toda_esta_pizza.
+**DEFAULT_NAME:**_¡Trato_hecho!_Pero..._¿Cómo_eran_las_reglas_de_EL_JUEGO?_Creo_que_necesito_un_repaso.
+**FRIEND_NAME:**_¿No_te_acuerdas?_Creo_que_tomaste_demasiado...._Es_fácil._Mira...
+*_**Si_DEFAULT_NAME_gana:**_Bueno,_pareciera_que_aún_se_te_da_bien,_menos_mal_porque_TU_VIDA_DEPENDE_DE_EL_JUEGO.
+*_**Si_FRIEND_NAME_gana:**_Tienes_que_estar_más_atenta,_recuerda_que_TU_VIDA_DEPENDE_DE_EL_JUEGO.
+Bueno,_nos_vamos_ya?_Te_dejo_en_tu_casa.
+**NARRADOR:**_*Pasaron_unas_horas._DEFAULT_NAME_se_encontraba_en_su_cama,_aún_con_la_resaca_de_la_noche_anterior.
+FRIEND_NAME_la_había_dejado_en_casa_y_ahora_yacía_sumida_en_un_profundo_sueño._De_repente,_un_ruido_ensordecedor_la_despertó.
+Antes_de_que_pudiera_reaccionar
+una_bolsa_oscura_cubrió_su_cabeza_y_unos_fuertes_brazos_la_levantaron_y_la_trasladaron_a_otra_habitación.
+Cuando_la_bolsa_fue_retirada,_se_encontró_en_su_sala_de_estar,_frente_a_una_figura_imponente.*
+**EL_GENERAL:**_¿Lista_para_jugar,_comediante?
+**DEFAULT_NAME:**_¿Qué..._qué_está_pasando?_¿Quién_es_usted?
+**EL_GENERAL:**_¿Acaso_no_reconoces_mi_voz?_Soy_el_mismo_al_que_ridiculizaste_en_tu_espectáculo.
+**DEFAULT_NAME:**_...
+**EL_GENERAL:**_Verás,_me_considero_un_hombre_justo,_así_que_te_propondré_algo,_apuesto_1500_de_prestigio
+si_tu_ganas_perderé_el_rango_de_General,_sin_embargo_si_yo_gano...._CAERÁS_AL_ABISMO_DE_LA_SOCIEDAD.
+**DEFAULT_NAME**:_No_tengo_otra_opción,_¿verdad?
+**EL_GENERAL:**_Exacto._EL_JUEGO_ha_comenzado.
+**EL_GENERAL:**_Andando..._Ya_no_eres_un_ser_humano._
+**NARRADOR:**_*Con_esas_palabras,_el_General_la_condujo_fuera_de_su_casa.*
+**NARRADOR**:_*Las_pesadas_puertas_de_hierro_se_cerraron_con_un_estruendo_ensordecedor
+sumiendo_a_DEFAULT_NAME_en_una_oscuridad_absoluta._Tardó_unos_momentos_en_acostumbrarse_a_la_penumbra
+y_cuando_sus_ojos_se_ajustaron,_se_encontró_en_un_lugar_que_parecía_más_una_pesadilla_que_una_prisión
+La_arquitectura_era_extraña_y_opresiva:_una_torre_helicoidal_que_se_extendía_hacia_arriba,_como_un_caracol_gigante
+con_celdas_diminutas_incrustadas_en_sus_paredes._Las_paredes_de_piedra_fría_y_húmeda_estaban_cubiertas_de_musgo_y_hongos
+y_el_aire_estaba_viciado_y_olía_a_desagüe_y_a_miedo.*
+*A_medida_que_avanzaba_por_los_oscuros_corredores,_el_sonido_de_sus_pasos_resonaba_con_una_intensidad_que_le_helaba_la_sangre.
+La_única_luz_provenía_de_unas_pocas_lámparas_parpadeantes,_que_proyectaban_sombras_grotescas_sobre_las_paredes.
+El_lugar_parecía_un_centro_de_tortura_lúgubre,_donde_la_muerte_se_respiraba_en_cada_rincón.
+Las_celdas_estaban_atestadas_de_prisioneros,_hombres_y_mujeres_de_todas_las_edades_y_condiciones
+sus_rostros_marcados_por_el_sufrimiento_y_la_desesperación.*
+*Mientras_caminaba_por_ese_lugar,_DEFAULT_NAME_se_dio_cuenta_de_que_la_gente_apostaba_sus_pocas_pertenencias.
+EL_JUEGO_parecía_ser_la_única_forma_de_entretenimiento_y,_al_mismo_tiempo,_una_moneda_de_cambio.
+Era_una_actividad_que_unía_a_los_prisioneros,_pero_también_los_enfrentaba_unos_contra_otros
+creando_una_atmósfera_de_constante_tensión.*
+**PRISION_FRIEND:**_¿Eres_nueva_por_aquí,_eh?_Bienvenida_al_infierno._Realmente_es_como_afuera
+digamos_que_es_una_muestra_en_miniatura_de_la_sociedad...._el_más_fuerte_sobrevive._Y_lo_más_importante
+todo_se_decide_con_EL_JUEGO._
+**NARRADOR:**_*PRISION_FRIEND_hizo_un_gesto_hacia_un_grupo_de_prisioneros_reunidos_alrededor_de_una_mes
+_donde_se_escuchaban_risas_y_exclamaciones.*
+**PRISION_FRIEND:**_Como_ves,_EL_JUEGO_es_la_ley._Aquí,_el_PRESTIGIO_es_más_valioso_que_en_el_exterior.
+Si_quieres_sobrevivir,_tendrás_que_aprender_a_jugar_y_a_jugar_bien.
+Y_ten_cuidado,_porque_muchos_han_perdido_todo_lo_que_tenían_por_una_mala_jugada.
+**NARRADOR:**_*Mientras_PRISION_FRIEND_explicaba_las_reglas_implícitas_de_la_prisión
+uno_de_los_prisioneros_que_se_encontraba_en_la_mesa_cercana_los_observaba_con_una_mirada_penetrante.
+Era_un_hombre_corpulento,_con_una_cicatriz_que_le_cruzaba_el_rostro_y_unos_ojos_que_transmitían_una_crueldad_innata.*
+**BAD_GUY_1:**_¡Oye_tú,_la_nueva!_¿Qué_miras?_¿Nunca_has_visto_un_juego_de_verdad?_¡Por_aquí_no_vas_a_durar_mucho!
+¡Dentro_de_poco_te_veré_muerta_en_la_celda!_¿O_te_suicidarás_antes_de_que_te_llegue_la_hora?
+**DEFAULT_NAME:**_¿Y_tú_quién_te_crees_para_hablarme_así?_¡No_me_subestimes!
+**BAD_GUY_1:**_¡Muy_bien,_mocosa!_¡Vamos_a_ver_de_qué_estás_hecha!
+Apuesto_50_de_mi_prestigio_a_que_no_me_ganas_ni_una_sola_partida!
+**NARRADOR:**_*Los_demás_prisioneros_se_acercaron,_emocionados_por_la_perspectiva_de_un_buen_espectáculo.
+DEFAULT_NAME,_a_pesar_del_miedo_que_sentía,_aceptó_el_desafío.
+Sabía_que_esta_era_su_oportunidad_de_demostrar_su_valía_y_de_ganarse_el_respeto_de_los_demás.*
+**BAD_GUY_1:**_¡Solo_has_tenido_suerte_esta_vez,_mocosa!_No_te_confíes.
+**BAD_GUY_1:**_¡Lo_ves!_Aquí_mandan_los_hombres_de_verdad,_no_las_niñas_como_tú.
+**BAD_GUY_2:**_¡No_te_creas_tan_importante!_Solo_has_tenido_un_golpe_de_suerte.
+**BAD_GUY_2:**_¡Así_se_hace!_¿Quién_es_la_novata_ahora?
+**BAD_GUY_3:**_¡No_te_confíes,_mocosa!_La_próxima_vez_no_tendrás_tanta_suerte.
+**BAD_GUY_3:**_¡Ves,_hasta_yo_puedo_ganarte!_¡Qué_decepción!
+**BAD_GUY_4:**_¡Esto_no_ha_terminado!_Te_haré_pagar_por_esta_humillación!
+**BAD_GUY_4:**_¡Soy_el_rey_de_este_lugar!_¡Nadie_me_puede_vencer!
+**PRISION_FRIEND:**_¡Oye,_tú!_¡Tienes_un_talento_natural_para_el_juego!_Es_una_pena_que_hayas_acabado_en_este_lugar.
+¿Qué_hiciste_para_merecer_esto?
+**NARRADOR**:_*DEFAULT_NAME,_un_poco_desconcertada_por_el_tono_amistoso_de_PRISION_FRIEND
+le_contó_brevemente_su_historia._PRISION_FRIEND_escuchó_atentamente,_asintiendo_con_la_cabeza_de_vez_en_cuando.*
+**PRISION_FRIEND:**_Vaya,_vaya._La_vida_es_injusta_a_veces._Yo_tengo_un_hijo_allá_afuera.
+Espero_que_algún_día_pueda_verlo_de_nuevo.
+**NARRADOR:**_*Pasaron_varios_días._DEFAULT_NAME_se_había_adaptado_a_la_vida_en_la_prisión.
+Había_aprendido_las_reglas_no_escritas,_había_forjado_algunas_alianzas_y
+había_ganado_el_respeto_de_muchos_de_los_prisioneros.
+Sin_embargo,_la_idea_de_pasar_el_resto_de_su_vida_entre_rejas_la_atormentaba.
+Una_noche,_mientras_jugaba_una_partida_tranquila_con_PRISION_FRIEND,_este_le_propuso_un_plan_audaz.*
+**PRISION_FRIEND:**_¿Qué_te_parecería_si_nos_escapáramos_de_aquí?
+**DEFAULT_NAME:**_¿Escapar?_¿Cómo?_¡Es_imposible!
+**PRISION_FRIEND:**_¡Nada_es_imposible!_Con_tu_habilidad_para_EL_JUEGO
+y_mis_conocimientos_de_la_prisión_y_quienes_están_acá,_podemos_lograrlo._La_idea_es_simple
+vamos_a_apostar_contra_los_guardias_y_los_funcionarios_más_importantes.
+Si_ganamos_suficiente_prestigio,_podremos_apelar_a_un_juicio_contra_EL_GENERAL.
+Con_un_poco_de_suerte,_podremos_demostrar_nuestra_inocencia_y_salir_de_aquí.
+**DEFAULT_NAME:**_Pero,_¿y_si_pierdo?_Sería_una_sentencia_de_muerte_inmediata_para_ambos.
+**PRISION_FRIEND:**_Siempre_hay_riesgos,_pero_creo_que_vale_la_pena_intentarlo.
+Creo_que_podríamos_empezar_con_Alejandro_Baas._Ese_tipo_se_ha_vuelto_cada_vez_más_macabro.
+Hace_unos_meses_le_ganó_aquella_partida_a_ese_chico_que_hacía_rap._El_tipo_terminó_suicidándose,
+pero_la_mayoría_cree_que_fue_Alejandro_que_lo_mató._Desde_entonces,_todos_le_temen.
+**DEFAULT_NAME:**_Creo_que_escuché_el_caso._¡Fue_horrible!_No_puedo_creer_que_lo_hayan_dejado_salir_ileso.
+**PRISION_FRIEND:**_Exactamente._Si_lo_vencemos,_no_solo_ganaremos_prestigio,
+sino_que_también_nos_ganaremos_el_respeto_de_los_demás_prisioneros.
+**NARRADOR:**_*Con_un_plan_en_mente
+DEFAULT_NAME_y_PRISION_FRIEND_se_acercaron_a_la_mesa_donde_Alejandro_Baas_estaba_jugando_con_otros_prisioneros.*
+**ALEJANDRO_BAAS:**_¿Qué_quieren,_mocosos?_¿Otra_partida_más?_¡No_me_hagan_reír!_Ya_llevo_4_hoy_y_todas_las_he_ganado.....
+Un_momento,_¿Eres_la_nueva?,_perfecto,_carne_nueva.
+**DEFAULT_NAME:**_Alejandro,_tengo_una_propuesta_para_ti._Apuesto_100_de_mi_prestigio_a_que_te_gano_en_una_partida.
+**ALEJANDRO_BAAS:**:_Eres_muy_valiente,_mocosa._Pero_te_advierto,_si_me_ganas,_me_divertiré_contigo_preciosa.
+**DEFAULT_NAME:**_Acepto_tu_apuesta.
+**NARRADOR:**_*La_victoria_sobre_Alejandro_Baas_resonó_por_toda_la_prisión._
+El_nombre_de_DEFAULT_NAME_comenzó_a_susurrarse_en_los_rincones_más_oscuros,_llegando_a_oídos_de_los_prisioneros_más_peligrosos._La_reputación_que_había_ganado_a_pulso_la_convertía_en_un_objetivo_tanto_temido_como_deseado.*
+*Una_noche,_mientras_DEFAULT_NAME_descansaba_en_su_celda,_alguien_llamó_a_la_puerta._Con_un_nudo_en_el_estómago
+se_levantó_y_abrió._Del_otro_lado,_un_tipo_de_aspecto_rudo_y_amenazador_la_observaba_fijamente.*
+**PRISIONER_1:**_Oye,_tú,_la_que_le_ganó_a_Baas._Ven_conmigo.
+**NARRADOR:**_*Sin_darle_tiempo_a_reaccionar,_el_hombre_la_condujo_por_los_oscuros_pasillos_hasta_una_celda_con_el_número_23.
+Al_entrar,_se_encontró_con_un_hombre_corpulento,_con_una_mirada_penetrante_y_una_cicatriz_que_le_cruzaba_el_rostro.
+Era_La_Vaca,_uno_de_los_prisioneros_más_temidos_de_la_prisión.*
+**LA_VACA:**_Así_que_tú_eres_la_famosa_DEFAULT_NAME._Me_han_hablado_mucho_de_ti._Dicen_que_eres_muy_buena_en_EL_JUEGO.
+**DEFAULT_NAME:**_Gracias_por_el_cumplido._¿Qué_desea_de_mí?
+**LA_VACA:**_Quiero_que_trabajes_conmigo._Tengo_información_valiosa_que_podría_interesarte.
+Y_créeme,_puedo_ofrecerte_mucho_más_que_ese_viejo_amigo_tuyo.
+**DEFAULT_NAME:**_No_sé_de_qué_me_habla.
+**LA_VACA**:_¿Segura?_Parece_ser_que_no_sabes_lo_suficiente,_ese_tipo_mató_a_la_esposa_de_EL_GENERAL_hace_muchos_años,
+dejando_a_su_hijo_abandonado._¿Quieres_rodearte_de_alguien_como_él?
+**LA_VACA:**_Vamos,_no_te_hagas._Sé_que_quieres_salir_de_aquí_tanto_como_yo._Si_trabajas_conmigo,_te_ayudaré_a_conseguirlo.
+Pero_si_no..._bueno,_digamos_que_las_cosas_se_podrían_poner_feas.
+**DEFAULT_NAME:**_Lo_siento,_pero_no_creo_que_podamos_trabajar_juntos.
+**LA_VACA:**_Muy_bien,_si_no_quieres_ser_mi_aliada,_entonces_serás_mi_rival.
+Apuesto_el_500_de_mi_prestigio_a_que_no_me_ganas_en_una_partida._Si_pierdes,_estarás_muerta.
+**NARRADOR:**_*Con_esta_victoria,_DEFAULT_NAME_había_escalado_aún_más_alto_en_la_jerarquía_de_la_prisión.
+Su_nombre_era_conocido_por_todos,_y_su_prestigio_le_abría_las_puertas_a_lugares_antes_inaccesibles.*
+**PRISION_FRIEND:**_¡Increíble!_¡Lo_has_vuelto_a_hacer!_Ahora_sí_que_estamos_encaminados_hacia_nuestra_libertad.
+**DEFAULT_NAME:**_Sí,_pero_también_nos_estamos_metiendo_en_aguas_muy_profundas._No_creo_que_haya_vuelta_atrás_ahora.
+**PRISION_FRIEND:**_Tienes_razón._Pero_si_queremos_salir_de_aquí,_tenemos_que_arriesgarnos.
+Y_tú_eres_la_única_que_puede_llevarnos_a_la_victoria.
+**NARRADOR:**_*Pasaron_unos_días._DEFAULT_NAME_había_acumulado_suficiente_prestigio_para_solicitar_una_audiencia_con_el_juez.
+Con_una_mezcla_de_esperanza_y_nerviosismo,_se_dirigió_a_la_sala_de_audiencias.
+Al_llegar,_se_encontró_con_una_guardia_imponente_llamada_TEMPORAL_NAME.*
+**TEMPORAL_NAME:**_Tú_debes_ser_DEFAULT_NAME._¿Qué_quieres?
+**DEFAULT_NAME:**_Vengo_a_solicitar_una_audiencia_con_el_juez._Tengo_pruebas_de_mi_inocencia.
+**TEMPORAL_NAME:**_Lo_siento,_pero_no_puedes_pasar._El_juez_no_recibe_a_cualquiera.
+**DEFAULT_NAME:**_Pero_tengo_el_prestigio_suficiente._¡Tengo_derecho_a_un_juicio!
+**TEMPORAL_NAME:**_Está_bien,_pero_no_me_da_la_gana,_¿O_acaso_quieres_apostar_conmigo?
+Te_recuerdo_que_el_guardia_más_estúpido_de_esta_prisión_quintuplica_tu_prestigio.
+**DEFAULT_NAME:**_Está_bien,_¿Me_crees_imbécil?_Te_apuesto_750_de_mi_prestigio.
+**NARRADOR:**_*DEFAULT_NAME_se_encontró_en_un_dilema._Por_un_lado
+sabía_que_necesitaba_ganar_la_partida_para_poder_salir_de_la_prisión.
+Pero_por_otro_lado,_no_quería_arriesgar_todo_lo_que_había_logrado.
+Sin_embargo, la_idea_de_pasar_el_resto_de_su_vida_entre_rejas_era_insoportable.*
+**NARRADOR:**_*Tras_la_trepidante_victoria_sobre_la_guardia_corrupta
+DEFAULT_NAME_se_adentró_en_un_laberinto_de_esperas_y_trámites_para_finalmente_obtener_su_audiencia.
+Los_días_se_sucedieron,_cada_uno_cargado_de_una_ansiedad_creciente._Finalmente,_el_día_del_juicio_llegó.*
+*La_sala_era_opresiva,_con_paredes_de_piedra_fría_y_una_atmósfera_cargada_de_tensión.
+Al_fondo,_sentado_en_un_estrado_elevado,_se_encontraba_EL_GENERAL,_el_hombre_que_ostentaba_el_poder_absoluto_en_la_prisión.
+Su_mirada,_fría_y_calculadora,_recorrió_la_sala_hasta_posarse_en_DEFAULT_NAME._El_general_parecía_más_enojado_que_nunca,_la_idea_de_que_una_simple_prisionera_lo_hubiera_desafiado_tantas_veces_le_revolvía_las_entrañas.*
+*La_jueza,_una_mujer_de_voz_firme_y_mirada_penetrante,_dio_inicio_al_juicio.*
+**JUEZA:**_DEFAULT_NAME,_se_te_acusa_de_múltiples_violaciones_en_contra_de_los_poderes_policiales._¿Reconoces_los_cargos?
+**DEFAULT_NAME**:_No_reconozco_que_he_infringido_normas.
+**JUEZA:**_GENERAL,_¿tiene_algo_que_decir_al_respecto?
+**EL_GENERAL:**_Esta_mujer_es_una_amenaza_para_el_orden_establecido.
+Ha_desafiado_mi_autoridad_en_repetidas_ocasiones_y_ha_incitado_a_la_rebelión._Debe_ser_castigada.
+**JUEZA:**_GENERAL,_antes_de_emitir_una_sentencia,_quiero_darle_a_DEFAULT_NAME_la_oportunidad_de_demostrar_su_inocencia.
+¿Estás_dispuesto_a_aceptar_un_desafío?
+**EL_GENERAL:**_Por_supuesto._Apuesto_todo_mi_prestigio_a_que_esta_mujer_no_puede_vencerme.
+**DEFAULT_NAME:**_Acepto_tu_desafío,_GENERAL._Apuesto_el_100%_de_mi_prestigio_a_que_te_ganaré_en_una_partida.
+**JUEZA:**_Muy_bien._Que_comience_el_juego.
+**EL_GENERAL:**_No_puede_ser..._¡Esto_no_es_posible!
+**DEFAULT_NAME:**_Lo_siento,_GENERAL,_pero_he_ganado.
+**JUEZA:**_GENERAL,_por_haber_perdido,_el_100%_de_tu_PRESTIGIO_pasará_a_DEFAULT_NAME,_por_lo_que_estás_sentenciado_a_pena_de_muerte.
+**NARRADOR:**_Con_esta_victoria,_DEFAULT_NAME_no_solo_había_ganado_su_libertad
+sino_que_también_había_cambiado_el_destino_de_toda_la_prisión.
+Su_nombre_sería_recordado_por_siempre_como_el_de_la_mujer_que_desafió_al_poder_y_lo_venció.
