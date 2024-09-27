@@ -72,6 +72,7 @@ void overwrite_matrix(char target_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char over
 
 
 void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes) {
+	bool color_toggle = false;
     for(int vertical = 0; vertical < HEIGHT_SCREEN; vertical++) {
         for(int horizontal = 0; horizontal < WIDTH_SCREEN; horizontal++) {
             std::string output;
@@ -93,13 +94,21 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
                 output = "━";
             else if (matrix[vertical][horizontal] == '/')
                 output = "┃";
+            else if (matrix[vertical][horizontal] == '~') {
+                color_toggle = !color_toggle;
+				output = " ";
+            }
             else
                 output = matrix[vertical][horizontal];
 
-            if (use_escape_codes)
-                std::cout << "\033[30;47m" << output << "\033[0m";
-            else
-                std::cout << output;
+            if (use_escape_codes) {
+				std::cout << "\033[30;47m" << output << "\033[0m";
+            } else {
+				if (color_toggle)
+					std::cout << "\033[31m" << output << "\033[0m";
+				else
+					std::cout << output;
+            }
         }
         std::cout << std::endl;
     }
