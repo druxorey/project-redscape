@@ -4,35 +4,37 @@
 #include "include/utils.hpp"
 #include "include/engine.hpp"
 
-char main_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
-char overlay_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
+char first_character_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
+char second_character_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
+char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
 
 
 int tutorial();
 
 
 int main() {
-	initialize_matrix(main_matrix);
-	initialize_matrix(overlay_matrix);
+	initialize_matrix(first_character_matrix);
+	initialize_matrix(second_character_matrix);
+	initialize_matrix(dialog_matrix);
 
 	clear();
 
 	for (int i = 1; i <= 17; i++) {
-		process_prologue(overlay_matrix, main_matrix, i);
+		process_prologue(dialog_matrix, i);
 	}
 
 	clear();
-	process_dialog_scene("assets/chad", 18, 'd', main_matrix, overlay_matrix);
+	process_dialog_scene("assets/chad", 18, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 19, 'd', main_matrix, overlay_matrix);
+	process_dialog_scene("assets/bana", 19, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 20, 'd', main_matrix, overlay_matrix);
+	process_dialog_scene("assets/chad", 20, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 21, 'd', main_matrix, overlay_matrix);
+	process_dialog_scene("assets/chad", 21, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 22, 'd', main_matrix, overlay_matrix);
+	process_dialog_scene("assets/bana", 22, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 23, 'd', main_matrix, overlay_matrix);
+	process_dialog_scene("assets/chad", 23, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 
 	tutorial();
