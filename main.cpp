@@ -21,6 +21,20 @@ int main() {
 		process_prologue(overlay_matrix, main_matrix, i);
 	}
 
+	clear();
+	process_dialog_scene("assets/chad", 18, 'd', main_matrix, overlay_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 19, 'd', main_matrix, overlay_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/chad", 20, 'd', main_matrix, overlay_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/chad", 21, 'd', main_matrix, overlay_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 22, 'd', main_matrix, overlay_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/chad", 23, 'd', main_matrix, overlay_matrix);
+	refresh(2500);
+
 	tutorial();
 	
 	return 0;
