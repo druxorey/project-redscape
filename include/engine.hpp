@@ -7,6 +7,9 @@
 const int WIDTH_SCREEN = 150;
 const int HEIGHT_SCREEN = 49;
 
+// Ininitialize a character array with spaces
+void initialize_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]);
+
 // Gets the dialog on the line specified by dialog_index from the file '../assets/dialogue.txt'
 std::string get_dialog(int dialog_index);
 

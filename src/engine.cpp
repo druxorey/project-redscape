@@ -3,6 +3,13 @@
 #include <cmath>
 #include "../include/engine.hpp"
 
+void initialize_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]) {
+	for (int i = 0; i < HEIGHT_SCREEN; i++)
+		for (int j = 0; j < WIDTH_SCREEN; j++)
+			matrix[i][j] = ' ';
+}
+
+
 std::string get_dialog(int dialog_index) {
     FILE* file = fopen("assets/dialogue.txt", "r");
 	char line[128];
