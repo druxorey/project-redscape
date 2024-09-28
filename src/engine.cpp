@@ -200,3 +200,21 @@ void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialo
 	printf("\nPresiona enter para continuar...");
 	std::cin.get();
 }
+
+
+void process_title(std::string title_screen_location, bool use_escape_codes) {
+    FILE* file = fopen(title_screen_location.c_str(), "r");
+    std::string content;
+    char c;
+
+    if (file) {
+        while ((c = fgetc(file)) != EOF) {
+			if (use_escape_codes)
+				std::cout << "\033[30;47m" << c << "\033[0m";
+			else
+				std::cout << c;
+        }
+        fclose(file);
+		std::cout << std::endl;
+    }
+}
