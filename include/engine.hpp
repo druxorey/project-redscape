@@ -45,7 +45,7 @@ void process_dialog_scene(const std::string& scene_file, int dialog_index, char 
 void process_visual_scene(const std::string& scene_file, char principal_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes = false);
 
 // Process a prologue scene
-void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char main_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialog_index);
+void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialog_index);
 
 
 /* MAIN EXAMPLE

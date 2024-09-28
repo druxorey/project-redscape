@@ -67,15 +67,13 @@ void cutscene_to_matrix(const std::string& cutscene, char matrix[HEIGHT_SCREEN][
 
 
 void overwrite_matrix(char target_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char overlay_matrix[HEIGHT_SCREEN][WIDTH_SCREEN]) {
-	for(int i = 0; i < HEIGHT_SCREEN; i++) {
-		for(int j = 0; j < WIDTH_SCREEN; j++) {
-			if (overlay_matrix[i][j] == '_') {
-				target_matrix[i][j] = ' ';
-			} else if (overlay_matrix[i][j] != ' ') {
-				target_matrix[i][j] = overlay_matrix[i][j];
-			}
-		}
-	}
+    for(int i = 0; i < HEIGHT_SCREEN; i++) {
+        for(int j = 0; j < WIDTH_SCREEN; j++) {
+            if (overlay_matrix[i][j] != ' ' && target_matrix[i][j] != overlay_matrix[i][j]) {
+                target_matrix[i][j] = overlay_matrix[i][j];
+            }
+        }
+    }
 }
 
 
@@ -102,6 +100,8 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
                 output = "━";
             else if (matrix[vertical][horizontal] == '/')
                 output = "┃";
+			else if (matrix[vertical][horizontal] == '_')
+				output = " ";
             else if (matrix[vertical][horizontal] == '~') {
                 color_toggle = !color_toggle;
 				output = " ";
@@ -190,12 +190,11 @@ void process_visual_scene(const std::string& scene_file, char principal_matrix[H
 }
 
 
-void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char main_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialog_index) {
+void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialog_index) {
 	clear();
 	std::string dialog = get_dialog(dialog_index);
 	draw_dialog(dialog_matrix, dialog, 'm');
-	overwrite_matrix(main_matrix, dialog_matrix);
-	print_matrix(main_matrix);
+	print_matrix(dialog_matrix);
 
 	sleep(1000);
 	printf("\nPresiona enter para continuar...");
