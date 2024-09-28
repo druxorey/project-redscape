@@ -2,6 +2,7 @@
 #include <string>
 #include <cmath>
 #include "../include/engine.hpp"
+#include "../include/utils.hpp"
 
 void initialize_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]) {
 	for (int i = 0; i < HEIGHT_SCREEN; i++)
@@ -186,4 +187,17 @@ void process_visual_scene(const std::string& scene_file, char principal_matrix[H
     std::string screen = get_cutscene(scene_file);
     cutscene_to_matrix(screen, principal_matrix);
     print_matrix(principal_matrix, use_escape_codes);
+}
+
+
+void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char main_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialog_index) {
+	clear();
+	std::string dialog = get_dialog(dialog_index);
+	draw_dialog(dialog_matrix, dialog, 'm');
+	overwrite_matrix(main_matrix, dialog_matrix);
+	print_matrix(main_matrix);
+
+	sleep(1000);
+	printf("\nPresiona enter para continuar...");
+	std::cin.get();
 }
