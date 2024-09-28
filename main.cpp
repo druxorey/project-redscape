@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "include/cutscenes.hpp"
 #include "include/cards.hpp"
 #include "include/utils.hpp"
@@ -19,22 +20,47 @@ int main() {
 
 	clear();
 
-	for (int i = 1; i <= 17; i++) {
+	process_prologue(dialog_matrix, 1);
+
+	clear();
+
+	process_title("assets/title_screen_1.txt");
+	refresh(1000);
+	process_title("assets/title_screen_1.txt", true);
+	refresh(150);
+	process_title("assets/title_screen_1.txt");
+	refresh(250);
+	process_title("assets/title_screen_1.txt", true);
+	refresh(150);
+	process_title("assets/title_screen_1.txt");
+	refresh(1000);
+	process_title("assets/title_screen_2.txt");
+
+	std::cin.get();
+
+	clear();
+
+	process_prologue(dialog_matrix, 2);
+
+	clear();
+	refresh(1000);
+
+	for (int i = 3; i <= 19; i++) {
 		process_prologue(dialog_matrix, i);
 	}
 
 	clear();
-	process_dialog_scene("assets/chad", 18, 'd', second_character_matrix, dialog_matrix);
-	refresh(2500);
-	process_dialog_scene("assets/bana", 19, 'd', first_character_matrix, dialog_matrix);
-	refresh(2500);
 	process_dialog_scene("assets/chad", 20, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 21, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/bana", 21, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 22, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/chad", 22, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/chad", 23, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 24, 'd', first_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/chad", 25, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 
 	tutorial();
