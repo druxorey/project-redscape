@@ -4,7 +4,7 @@
 #include "../include/engine.hpp"
 
 std::string get_dialog(int dialog_index) {
-    FILE* file = fopen("../assets/dialogue.txt", "r");
+    FILE* file = fopen("assets/dialogue.txt", "r");
 	char line[128];
     int target_line = dialog_index, current_line = 0;
 
