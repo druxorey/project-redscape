@@ -33,7 +33,31 @@ int print_dialogue(const char *dialogue) {
 			return -1;
 		}
 
-	printf("\n%*c%s\n", (MAXLINE - size) / 2, ' ', dialogue);
+	int dialog_box_width = 184;
+	int box_padding = (MAXLINE - dialog_box_width) / 2;
+	int dialog_padding = (MAXLINE - size) / 2;
+
+
+	printf("%*c%s\n", box_padding, ' ', "╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋");
+	printf("%*c%s\n", box_padding, ' ', "┃                                                                                                                                                                                      ┃");
+	printf("%*c%s", box_padding, ' ',   "┃");
+
+	int i = 0;
+
+	for (; i < dialog_padding - box_padding; i++)
+		printf(" ");
+
+	printf("%s", dialogue);
+	i += size;
+
+	for (; i < dialog_box_width - 1; i++)
+		printf(" ");
+
+	printf("%s\n", "┃");
+
+	printf("        %s\n", "┃                                                                                                                                                                                      ┃");
+	printf("        %s",   "╋━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋");
+
 	return 0;
 }
 

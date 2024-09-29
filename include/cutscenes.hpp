@@ -2,7 +2,7 @@
 #include <iostream>
 
 // max size of the width of the screen, must be a positive value.
-#define MAXLINE 150
+#define MAXLINE 200
 
 // a scene, consists of an image (a directory to an ascii file), and a dialogue.
 typedef struct {

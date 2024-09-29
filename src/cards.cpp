@@ -209,41 +209,15 @@ void print_cards(card c[], int n, bool numbers) {
 		for (i = 0; i < n; i++)
 			printf("       %2d        ", i + 1);
 	}
-	printf("\n");
+	printf("\n\n");
 }
-
-
-std::string show_rcards(int n) {
-    std::string result;
-    int i, j;
-    int card_render_width = 16;
-    int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;
-
-    result += std::string(padding, ' ');
-    for (i = 0; i < n; i++)
-        result += "┌──────────────┐ ";
-    result += "\n" + std::string(padding, ' ');
-    for (i = 0; i < 10; i ++) {
-        for (j = 0; j < n; j++)
-            if (i % 2)
-                result += "│ # # # # # # #│ ";
-            else
-                result += "│# # # # # # # │ ";
-        result += "\n" + std::string(padding, ' ');
-    }
-    for (i = 0; i < n; i++)
-        result += "└──────────────┘ ";
-    result += "\n";
-
-    return result;
-}
-
 
 void print_rcards(int n) {
 	int i, j;
 	int card_render_width = 16;
 	int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;
 
+	printf("\n\n\n\n");
 	printf("%*s", padding, "");
 	for (i = 0; i < n; i++)
 		printf("%s ", "┌──────────────┐");
@@ -258,7 +232,7 @@ void print_rcards(int n) {
 	}
 	for (i = 0; i < n; i++)
 		printf("%s ", "└──────────────┘");
-	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 }
 
 const char *get_points(int appearances, bool is_special, int *points) {
