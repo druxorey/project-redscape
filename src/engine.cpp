@@ -197,8 +197,8 @@ void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialo
 	print_matrix(dialog_matrix);
 
 	sleep(1000);
-	printf("\nPresiona enter para continuar...");
-	std::cin.get();
+	// presiona enter para continuar
+	enter();
 }
 
 
@@ -215,6 +215,6 @@ void process_title(std::string title_screen_location, bool use_escape_codes) {
 				std::cout << c;
         }
         fclose(file);
-		std::cout << std::endl;
+	std::cout << std::endl;
     }
 }
