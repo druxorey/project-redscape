@@ -20,20 +20,11 @@ int main() {
 
 	clear();
 
-	process_prologue(dialog_matrix, 1);
-
+	process_title("assets/configuration-screen");
+	std::cin.get();
 	clear();
-
 	process_title("assets/title_screen_1.txt");
-	refresh(1000);
-	process_title("assets/title_screen_1.txt", true);
-	refresh(150);
-	process_title("assets/title_screen_1.txt");
-	refresh(250);
-	process_title("assets/title_screen_1.txt", true);
-	refresh(150);
-	process_title("assets/title_screen_1.txt");
-	refresh(1000);
+	refresh(2000);
 	process_title("assets/title_screen_2.txt");
 
 	std::cin.get();
@@ -50,29 +41,29 @@ int main() {
 	}
 
 	clear();
-	process_dialog_scene("assets/chad", 20, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/daniel/daniel", 20, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 21, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 21, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 22, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/daniel/daniel", 22, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 23, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/daniel/daniel", 23, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 24, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 24, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/chad", 25, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/daniel/daniel", 25, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 
 	bool userWon = tutorial();
 	
 	if (userWon) {
-		process_dialog_scene("assets/chad", 26, 'd', second_character_matrix, dialog_matrix);
+		process_dialog_scene("assets/daniel/daniel", 26, 'd', second_character_matrix, dialog_matrix);
 	} else {
-		process_dialog_scene("assets/chad", 27, 'd', second_character_matrix, dialog_matrix);
+		process_dialog_scene("assets/daniel/daniel", 27, 'd', second_character_matrix, dialog_matrix);
 	}
 
 	refresh(2500);
-	process_dialog_scene("assets/chad", 28, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/daniel/daniel", 28, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 
 	for (int i = 29; i <= 33; i++) {
@@ -81,17 +72,17 @@ int main() {
 
 	process_dialog_scene("assets/zapato", 34, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 35, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 35, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/zapato", 36, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 37, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 37, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/zapato", 38, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/zapato", 39, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 40, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 40, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/zapato", 41, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -129,7 +120,7 @@ int main() {
 	refresh(2500);
 	process_dialog_scene("assets/ddos", 72, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
-	process_dialog_scene("assets/bana", 73, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 73, 'd', first_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/ddos", 74, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -142,6 +133,7 @@ int main() {
 
 
 	return 0;
+
 }
 
 int tutorial() {
