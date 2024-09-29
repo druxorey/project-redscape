@@ -82,19 +82,7 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
     for(int vertical = 0; vertical < HEIGHT_SCREEN; vertical++) {
         for(int horizontal = 0; horizontal < WIDTH_SCREEN; horizontal++) {
             std::string output;
-            if (vertical == 0 && horizontal == 0)
-                output = "╔";
-            else if (vertical == HEIGHT_SCREEN - 1 && horizontal == WIDTH_SCREEN - 1)
-                output = "╝";
-            else if (vertical == 0 && horizontal == WIDTH_SCREEN - 1)
-                output = "╗";
-            else if (vertical == HEIGHT_SCREEN - 1 && horizontal == 0)
-                output = "╚";
-            else if (vertical == 0 || vertical == HEIGHT_SCREEN - 1)
-                output = "═";
-            else if (horizontal == 0 || horizontal == WIDTH_SCREEN - 1)
-                output = "║";
-            else if (matrix[vertical][horizontal] == '{')
+            if (matrix[vertical][horizontal] == '{')
                 output = "╋";
             else if (matrix[vertical][horizontal] == '}')
                 output = "━";
@@ -102,6 +90,18 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
                 output = "┃";
 			else if (matrix[vertical][horizontal] == '_')
 				output = " ";
+			else if (matrix[vertical][horizontal] == '|')
+				output = "ñ";
+			else if (matrix[vertical][horizontal] == '[')
+				output = "á";
+			else if (matrix[vertical][horizontal] == '$')
+				output = "é";
+			else if (matrix[vertical][horizontal] == '>')
+				output = "í";
+			else if (matrix[vertical][horizontal] == ']')
+				output = "ó";
+			else if (matrix[vertical][horizontal] == '<')
+				output = "ú";
             else if (matrix[vertical][horizontal] == '~') {
                 color_toggle = !color_toggle;
 				output = " ";
@@ -113,7 +113,7 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
 				std::cout << "\033[30;47m" << output << "\033[0m";
             } else {
 				if (color_toggle)
-					std::cout << "\033[31m" << output << "\033[0m";
+					std::cout << "\033[1;31m" << output << "\033[0m";
 				else
 					std::cout << output;
             }
