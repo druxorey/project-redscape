@@ -10,7 +10,7 @@ char first_character_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
 char second_character_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
 char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
 
-int main() { /*
+int main() {
 	initialize_matrix(first_character_matrix);
 	initialize_matrix(second_character_matrix);
 	initialize_matrix(dialog_matrix);
@@ -18,13 +18,13 @@ int main() { /*
 	clear();
 
 	process_title("assets/configuration-screen");
-	std::cin.get();
+	enter();
 	clear();
 	process_title("assets/title_screen_1.txt");
 	refresh(2000);
 	process_title("assets/title_screen_2.txt");
 
-	std::cin.get();
+	enter();
 
 	clear();
 
@@ -339,8 +339,6 @@ int main() { /*
 	for (int i = 182; i <= 184; i++) {
 		process_prologue(dialog_matrix, i);
 	}
-	*/	
-	tutorial();
 
 	return 0;
 }
