@@ -63,8 +63,84 @@ int main() {
 	process_dialog_scene("assets/chad", 25, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 
-	tutorial();
+	bool userWon = tutorial();
 	
+	if (userWon) {
+		process_dialog_scene("assets/chad", 26, 'd', second_character_matrix, dialog_matrix);
+	} else {
+		process_dialog_scene("assets/chad", 27, 'd', second_character_matrix, dialog_matrix);
+	}
+
+	refresh(2500);
+	process_dialog_scene("assets/chad", 28, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+
+	for (int i = 29; i <= 33; i++) {
+		process_prologue(dialog_matrix, i);
+	}
+
+	process_dialog_scene("assets/zapato", 34, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 35, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/zapato", 36, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 37, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/zapato", 38, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/zapato", 39, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 40, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/zapato", 41, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	// HERE STARTS THE FIRST GAME
+	process_dialog_scene("assets/zapato", 42, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+
+	for (int i = 43; i <= 58; i++) {
+		process_prologue(dialog_matrix, i);
+	}
+
+	process_dialog_scene("assets/hipervinculo", 59, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/hipervinculo", 60, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/hipervinculo", 61, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+
+	for (int i = 62; i <= 63; i++) {
+		process_prologue(dialog_matrix, i);
+	}
+
+	process_dialog_scene("assets/hipervinculo", 64, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/hipervinculo", 65, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/hipervinculo", 66, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+
+	for (int i = 67; i <= 70; i++) {
+		process_prologue(dialog_matrix, i);
+	}
+
+	process_dialog_scene("assets/ddos", 71, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/ddos", 72, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/bana", 73, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/ddos", 74, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+	process_dialog_scene("assets/ddos", 75, 'd', second_character_matrix, dialog_matrix);
+	refresh(2500);
+
+	for (int i = 76; i <= 78; i++) {
+		process_prologue(dialog_matrix, i);
+	}
+
+
 	return 0;
 }
 
