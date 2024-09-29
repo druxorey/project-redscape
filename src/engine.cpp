@@ -132,10 +132,10 @@ void draw_dialog(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], std::string dialog, c
 			position_height = 2;
 			break;
 		case 'm':
-			position_height = 24;
+			position_height = 27;
 			break;
 		case 'd':
-			position_height = 42;
+			position_height = 48;
 			break;
 		default:
 			position_height = 24;
