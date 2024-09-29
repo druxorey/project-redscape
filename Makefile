@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-I include -Wall
-OBJS= main.o cards.o cutscenes.o utils.o engine.o
+OBJS= main.o cards.o cutscenes.o utils.o engine.o combats.o
 BUILD_DIR = build
 
 start: $(BUILD_DIR)/redscape
@@ -26,6 +26,9 @@ $(BUILD_DIR)/utils.o: src/utils.cpp
 
 $(BUILD_DIR)/engine.o: src/engine.cpp
 	$(CC) $(CFLAGS) -c src/engine.cpp -o $@
+
+$(BUILD_DIR)/combats.o: src/combats.cpp
+	$(CC) $(CFLAGS) -c src/combats.cpp -o $@
 
 clean:
 	rm -f $(BUILD_DIR)/*.o $(BUILD_DIR)/redscape
