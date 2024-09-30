@@ -170,14 +170,13 @@ bool tutorial() {
 	return (points < enemy_points) ? true : false;
 }
 
-int combat(const char *dialogue1, const char *dialogue2) {
+bool combat(const char *dialogue1, const char *dialogue2) {
 	// initialization of the game
 	card deck[DECKSIZE];
 	initialize_deck(deck);
 
 	card player_hand[HANDSIZE];
 	card enemy_hand[HANDSIZE];
-	card example_hand[HANDSIZE];
 
 	generate_hand(deck, player_hand);
 	generate_hand(deck, enemy_hand);
