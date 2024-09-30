@@ -82,8 +82,8 @@ int main() {
 	refresh(3600);
 
 	// HERE STARTS THE FIRST FIGHT
-
-	process_prologue(dialog_matrix, 42);
+	scombat(false, "EL GENERAL: Sabes, no llegue hasta aqui perdiendo partidas.", "EL GENERAL: Veamos que tienes...", "el General");
+	process_dialog_scene("assets/el-general/el-general", 42, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 
 	for (int i = 43; i <= 58; i++) {
@@ -110,6 +110,7 @@ int main() {
 	process_dialog_scene("assets/roberto/roberto", 66, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 
+
 	for (int i = 67; i <= 70; i++) {
 		process_prologue(dialog_matrix, i);
 	}
@@ -119,7 +120,7 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/prisioners/prisioner-1", 72, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary", 73, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_o", 73, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/prisioners/prisioner-1", 74, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
@@ -157,18 +158,17 @@ int main() {
 		process_dialog_scene("assets/prisioners/prisioner-4", 86, 'd', second_character_matrix, dialog_matrix);
 
 	refresh(3600);
-
-	process_dialog_scene("assets/roberto/roberto", 87, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 87, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 88, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_r", 88, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary", 89, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_l", 89, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary", 90, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_o_l", 90, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 91, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 91, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 92, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_r", 92, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 
 	for (int i = 93; i <= 97; i++) {
@@ -180,31 +180,31 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/mary/mary_l", 99, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 100, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 100, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_l", 101, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_r", 101, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/roberto/roberto_o", 102, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_o_l", 103, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_r", 103, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_l", 104, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 104, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary", 105, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_l", 105, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 106, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 106, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_o", 107, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_r", 107, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 108, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 108, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/roberto/roberto_o_r", 109, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_o", 110, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_o_l", 110, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 111, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_r", 111, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto", 112, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_r", 112, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 
 	for (int i = 113; i <= 114; i++) {
@@ -218,15 +218,14 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/mary/mary", 117, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/alejandro-baas/alejandro_baas", 118, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/alejandro-baas/alejandro_baas_r", 118, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary", 119, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_l", 119, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 
 	// HERE STARTS THE SIXTH FIGHT
-	if (!combat("ALEJANDRO BAAS: No va a ser normal esta humillacion.", "ALEJANDRO BAAS: jajajaja...", "Baas")) {
+	if (!combat("ALEXANDRA BAAS: No va a ser normal esta humillacion.", "ALEXANDRA BAAS: jajajaja...", "Baas")) {
 		process_title("assets/game_over");
-		refresh(3600);
 		return 0;
 	}
 	refresh(3600);
@@ -246,13 +245,13 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/la-vaca/la-vaca", 129, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_o_r", 130, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_o_l", 130, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/la-vaca/la-vaca", 131, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/la-vaca/la-vaca_o", 132, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_r", 133, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_l", 133, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/la-vaca/la-vaca", 134, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
@@ -262,7 +261,7 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/la-vaca/la-vaca_o", 137, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_r", 138, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_l", 138, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/la-vaca/la-vaca", 139, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
@@ -281,13 +280,13 @@ int main() {
 	}
 
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_r", 143, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_l", 143, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/mary/mary_r", 144, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_r", 145, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_l", 145, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/roberto/roberto_o_r", 146, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/roberto/roberto_o_l", 146, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 
 	for (int i = 147; i <= 149; i++) {
@@ -297,11 +296,11 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/arantxa/arantxa_l", 150, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_o", 151, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_o_r", 151, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/arantxa/arantxa_l", 152, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary", 153, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_r", 153, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/arantxa/arantxa", 154, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
@@ -328,19 +327,19 @@ int main() {
 	refresh(3600);
 	process_dialog_scene("assets/jueza/jueza", 169, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_l", 170, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary", 170, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/jueza/jueza", 171, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/el-general/el-general_r", 172, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/el-general/el-general", 172, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/el-general/el-general_r", 173, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/el-general/el-general", 173, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/jueza/jueza", 174, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/jueza/jueza", 175, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/el-general/el-general_r", 176, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/el-general/el-general", 176, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/mary/mary_o", 177, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
@@ -348,12 +347,16 @@ int main() {
 	refresh(3600);
 
 	// HERE STARTS THE NINTH FIGHT
-	scombat(false, "JUEZA: Una mocosa como tú no me la va a jugar.", "JUEZA: jajaja...", "la jueza");
+	if (!combat("JUEZA: Una mocosa como tu no le va a ganar al gran general.", "GENERAL: ...", "el general")) {
+		process_title("assets/game_over");
+		refresh(3600);
+		return 0;
+	}
 
 	refresh(3600);
-	process_dialog_scene("assets/el-general/el-general_r", 179, 'd', second_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/el-general/el-general", 179, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);
-	process_dialog_scene("assets/mary/mary_o_r", 180, 'd', first_character_matrix, dialog_matrix);
+	process_dialog_scene("assets/mary/mary_o", 180, 'd', first_character_matrix, dialog_matrix);
 	refresh(3600);
 	process_dialog_scene("assets/jueza/jueza", 181, 'd', second_character_matrix, dialog_matrix);
 	refresh(3600);

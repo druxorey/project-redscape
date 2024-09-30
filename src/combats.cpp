@@ -145,8 +145,10 @@ bool tutorial() {
 	enter
 
 	// Calculate enemy's points
-	for (i = 0; i < HANDSIZE; i++)
-		normal[i] = special[i] = 0;
+	for (i = 0; i < DECKSIZE / TYPENUM + 1; i++)
+		special[i] = 0;
+	for (i = 0; i < TYPENUM; i++)
+		normal[i] = 0;
 
 	for (i = 0; i < HANDSIZE; i++) {
 		special[enemy_hand[i].value]++;
@@ -239,14 +241,9 @@ bool combat(const char *dialogue1, const char *dialogue2, const char *enemy) {
 		}
 
 	clear();
-	print_rcards(HANDSIZE);
-	print_cards(player_hand, HANDSIZE, true);
-	print_dialogue(dialogue2);
-	enter
-
-	clear();
 	print_ecards(enemy_hand, HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue(dialogue2);
 	enter
 		
 	// BEGIN COMPARISON OF YOUR CARDS AND ENEMY'S. THE ONE WITH MORE POINTS WINS THE ROUND.
@@ -291,8 +288,11 @@ bool combat(const char *dialogue1, const char *dialogue2, const char *enemy) {
 	enter
 
 	// Calculate enemy's points
-	for (i = 0; i < HANDSIZE; i++)
-		normal[i] = special[i] = 0;
+	for (i = 0; i < DECKSIZE / TYPENUM + 1; i++)
+		special[i] = 0;
+
+	for (i = 0; i < TYPENUM; i++)
+		normal[i] = 0;
 
 	for (i = 0; i < HANDSIZE; i++) {
 		special[enemy_hand[i].value]++;
@@ -326,7 +326,7 @@ bool combat(const char *dialogue1, const char *dialogue2, const char *enemy) {
 		print_dialogue("Perdiste.");
 	else {
 		print_dialogue("Empataste. Siguiente ronda");
-		combat("", "", enemy);
+		combat(dialogue1, dialogue2, enemy);
 	}
 	enter
 	clear();
@@ -387,14 +387,9 @@ bool scombat(bool user_win, const char *dialogue1, const char *dialogue2, const 
 		}
 
 	clear();
-	print_rcards(HANDSIZE);
-	print_cards(player_hand, HANDSIZE, true);
-	print_dialogue(dialogue2);
-	enter
-
-	clear();
 	print_ecards(enemy_hand, HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
+	print_dialogue(dialogue2);
 	enter
 		
 	// BEGIN COMPARISON OF YOUR CARDS AND ENEMY'S. THE ONE WITH MORE POINTS WINS THE ROUND.
@@ -439,8 +434,11 @@ bool scombat(bool user_win, const char *dialogue1, const char *dialogue2, const 
 	enter
 
 	// Calculate enemy's points
-	for (i = 0; i < HANDSIZE; i++)
-		normal[i] = special[i] = 0;
+	for (i = 0; i < DECKSIZE / TYPENUM + 1; i++)
+		special[i] = 0;
+
+	for (i = 0; i < TYPENUM; i++)
+		normal[i] = 0;
 
 	for (i = 0; i < HANDSIZE; i++) {
 		special[enemy_hand[i].value]++;
