@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/cards.hpp"
+#include "../include/utils.hpp"
 #include "../include/cutscenes.hpp"
 
 void initialize_deck(card *deck) {
@@ -246,19 +247,19 @@ void print_ecards(card enemy_hand[], int n) {
 const char *get_points(int appearances, bool is_special, int *points) {
 	if (is_special && (appearances == 5)) {
 		*points += 12;
-		return "¡Quíntuple especial, 12 puntos (Máximo puntaje)!";
+		return "!Quíntuple especial, 12 puntos (Máximo puntaje)!";
 	}
 	else if (is_special && (appearances == 4)) {
 		*points += 10;
-		return "¡Cuádruple especial, 10 puntos!";
+		return "!Cuádruple especial, 10 puntos!";
 	}
 	else if (is_special && (appearances == 3)) {
 		*points += 7;
-		return "¡Triple especial, 7 puntos!";
+		return "!Triple especial, 7 puntos!";
 	}
 	else if (!is_special && (appearances == 5)) {
 		*points += 7;
-		return "¡Quíntuple, 7 puntos!";
+		return "!Quíntuple, 7 puntos!";
 	}
 	else if (is_special && (appearances == 2)) {
 		*points += 5;
