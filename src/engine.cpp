@@ -199,7 +199,7 @@ void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialo
 	draw_dialog(dialog_matrix, dialog, 'm');
 	print_matrix(dialog_matrix);
 
-	enter
+	sleep(2500);
 }
 
 
