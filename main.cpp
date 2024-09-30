@@ -15,7 +15,9 @@ int main() {
 
 	clear();
 
-	process_title("assets/configuration-screen");
+	process_title("assets/configuration-screen_1");
+	refresh(2000);
+	process_title("assets/configuration-screen_2");
 	enter
 	clear();
 	process_title("assets/title_screen_1.txt");
