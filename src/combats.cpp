@@ -1,7 +1,8 @@
-#include "../include/cards.hpp"
-#include "../include/cutscenes.hpp"
+#include <iostream>
 #include "../include/utils.hpp"
+#include "../include/cards.hpp"
 #include "../include/combats.hpp"
+#include "../include/cutscenes.hpp"
 
 bool tutorial() {
 	// initialization of the game
@@ -20,13 +21,13 @@ bool tutorial() {
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue("DANIEL: Cada uno tiene una mano aleatoria de cartas.");
-	enter();
+	enter
 
 	clear();
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue("DANIEL: Tienes que fijarte en que tengas varias cartas del mismo tipo, y/o con el mismo numero.");
-	enter();
+	enter
 
 	clear();
 	print_rcards(HANDSIZE);
@@ -34,7 +35,7 @@ bool tutorial() {
 	example_hand[1] = {0, 12, 0};
 	print_cards(example_hand, 2, true);
 	print_dialogue("DANIEL: Por ejemplo, si tienes 2 cartas con el mismo tipo, se considera una pareja.");
-	enter();
+	enter
 
 	clear();
 	print_rcards(HANDSIZE);
@@ -42,19 +43,19 @@ bool tutorial() {
 	example_hand[1] = {1, 11, 0};
 	print_cards(example_hand, 2, true);
 	print_dialogue("DANIEL: Pero si tienen el mismo numero, es una pareja especial, y vale mas prestigio.");
-	enter();
+	enter
 
 	clear();
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue("DANIEL: Ya que tienes tus cartas, puedes decidir si cambiar algunas de ellas, o no.");
-	enter();
+	enter
 
 	clear();
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue("DANIEL: Por supuesto, con el riesgo de que te toquen cartas peores. Pero solo puedes cambiarlas una vez.");
-	enter();
+	enter
 
 	// asking the user to pick cards
 	clear();
@@ -94,13 +95,13 @@ bool tutorial() {
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue("DANIEL: Ahora es momento de revelar cuantos puntos tiene cada uno.");
-	enter();
+	enter
 
 	clear();
 	print_ecards(enemy_hand, HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue("DANIEL: El que tenga mas puntos se queda con esa misma cantidad de prestigio del rival.");
-	enter();
+	enter
 		
 	// BEGIN COMPARISON OF YOUR CARDS AND ENEMY'S. THE ONE WITH MORE POINTS WINS THE ROUND.
 	int special[DECKSIZE / TYPENUM + 1] = {0};
@@ -121,7 +122,7 @@ bool tutorial() {
 			print_ecards(enemy_hand, HANDSIZE);
 			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
-			enter();
+			enter
 		}
 	}
 	for (i = 0; i < TYPENUM; i++) {
@@ -130,7 +131,7 @@ bool tutorial() {
 			print_ecards(enemy_hand, HANDSIZE);
 			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
-			enter();
+			enter
 		}
 	}
 	char total_points_dialogue[25];
@@ -186,7 +187,7 @@ bool combat(const char *dialogue1, const char *dialogue2) {
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue(dialogue1);
-	enter();
+	enter
 
 	// asking the user to pick cards
 	clear();
@@ -226,12 +227,12 @@ bool combat(const char *dialogue1, const char *dialogue2) {
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
 	print_dialogue(dialogue2);
-	enter();
+	enter
 
 	clear();
 	print_ecards(enemy_hand, HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
-	enter();
+	enter
 		
 	// BEGIN COMPARISON OF YOUR CARDS AND ENEMY'S. THE ONE WITH MORE POINTS WINS THE ROUND.
 	int special[DECKSIZE / TYPENUM + 1] = {0};
@@ -252,7 +253,7 @@ bool combat(const char *dialogue1, const char *dialogue2) {
 			print_ecards(enemy_hand, HANDSIZE);
 			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
-			enter();
+			enter
 		}
 	}
 	for (i = 0; i < TYPENUM; i++) {
@@ -261,7 +262,7 @@ bool combat(const char *dialogue1, const char *dialogue2) {
 			print_ecards(enemy_hand, HANDSIZE);
 			print_cards(player_hand, HANDSIZE, true);
 			print_dialogue(points_dialogue);
-			enter();
+			enter
 		}
 	}
 	char total_points_dialogue[25];

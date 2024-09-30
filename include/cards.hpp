@@ -1,5 +1,4 @@
 #pragma once
-#include <string>
 
 // The size of a deck, a hand, and the number of card types, change wisely.
 #define DECKSIZE 52
@@ -31,7 +30,7 @@ const char *to_letter(int n);
 
 /* prints the given card in the screen, with this format:
 ┌──────────────┐
-│ 10 ♣         │
+│ NN S         │
 │  ┌────────┐  │
 │  │        │  │
 │  │        │  │
@@ -40,7 +39,7 @@ const char *to_letter(int n);
 │  │        │  │
 │  │        │  │
 │  └────────┘  │
-│         ♣ 10 │
+│         S NN │
 └──────────────┘
 
 */
@@ -48,7 +47,7 @@ void print_scard(card);
 
 /* prints the given card in the screen (selected mode), with this format:
 ┏━━━━━━━━━━━━━━┓
-┃ 10 ♣         ┃
+┃ NN S         ┃
 ┃  ┏━━━━━━━━┓  ┃
 ┃  ┃        ┃  ┃
 ┃  ┃        ┃  ┃
@@ -57,7 +56,7 @@ void print_scard(card);
 ┃  ┃        ┃  ┃
 ┃  ┃        ┃  ┃
 ┃  ┗━━━━━━━━┛  ┃
-┃         ♣ 10 ┃
+┃         S NN ┃
 ┗━━━━━━━━━━━━━━┛
 
 */
@@ -85,7 +84,8 @@ void print_rcard();
 // set the third argument to true if you want card numbers, false if you don't
 void print_cards(card [], int, bool);
 
-// prints the given number of reversed cards horizontally in the screen
+// prints the given number of reversed cards horizontally in the screen,
+// and also, the space of the table, in newlines
 void print_rcards(int);
 
 // prints the enemy's given cards horizontally in the screen

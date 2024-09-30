@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 
 // max size of the width of the screen, must be a positive value.
 #define MAXLINE 200
