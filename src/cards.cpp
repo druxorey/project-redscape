@@ -28,6 +28,34 @@ void generate_hand(card *deck, card *hand) {
 	}
 }
 
+void generate_shand(bool user_win, card *deck, card *hand) {
+	srand(time(NULL));
+	int first, randcard, type, value;
+	first = rand() % DECKSIZE;
+	type = deck[first].type;
+	value = deck[first].value;
+
+	for (int i = 0; i < HANDSIZE; ) {
+		randcard = rand() % DECKSIZE;
+		if (deck[randcard].chosen == false) {
+			if (user_win && (deck[randcard].type == type || deck[randcard].value == value)) {
+				hand[i].type = deck[randcard].type;
+				hand[i].value = deck[randcard].value;
+				hand[i].chosen = false;
+				deck[randcard].chosen = true;
+				i++;
+			}
+			else if (!user_win && deck[randcard].type != type && deck[randcard].value != value) {
+				hand[i].type = deck[randcard].type;
+				hand[i].value = deck[randcard].value;
+				hand[i].chosen = false;
+				deck[randcard].chosen = true;
+				i++;
+			}
+		}
+	}
+}
+
 int get_card(card *deck) {
 	srand(time(NULL));
 	int randcard, i;

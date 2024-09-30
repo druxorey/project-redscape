@@ -19,6 +19,11 @@ void initialize_deck(card *deck);
 // takes a deck, and puts {HANDSIZE} of its available cards onto the hand.
 void generate_hand(card *deck, card *hand);
 
+// takes a deck, and puts {HANDSIZE} of its available cards onto the hand.
+// the first argument indicates whether you want a good hand or a bad hand
+// the s stands for scripted
+void generate_shand(bool user_win, card *deck, card *hand);
+
 // given a deck, return an input to an available card
 int get_card(card *deck);
 

@@ -3,6 +3,14 @@
 ## **Overview**
 Project Redscape is an exciting text-based card game, developed in C++ for [TheGame.cpp](https://henrzven.github.io/the-game/). Immerse yourself in a world of where you must use your wits and strategy to win.
 
+## Compilation / Execution
+To compile the program you can use the Makefile, but you need to have make installed and set on your env variables.
+You can use this method by typing "make all start". This will compile and execute the game.
+
+In case you don't have make, you can compile and run manually with g++, with this two commands:
+g++ -o build/redscape -Iinclude main.cpp src/cards.cpp src/cutscenes.cpp src/utils.cpp src/combats.cpp src/engine.cpp
+./build/redscape
+
 ## Contribute
 If you want to add new functionalities or improve existing ones, follow these steps:
 
