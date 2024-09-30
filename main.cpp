@@ -1,7 +1,4 @@
 #include <iostream>
-#include <string>
-#include "include/cutscenes.hpp"
-#include "include/cards.hpp"
 #include "include/utils.hpp"
 #include "include/engine.hpp"
 #include "include/combats.hpp"
@@ -18,13 +15,13 @@ int main() {
 	clear();
 
 	process_title("assets/configuration-screen");
-	enter();
+	enter
 	clear();
 	process_title("assets/title_screen_1.txt");
 	refresh(2000);
 	process_title("assets/title_screen_2.txt");
 
-	enter();
+	enter
 
 	clear();
 

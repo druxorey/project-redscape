@@ -235,6 +235,12 @@ void print_rcards(int n) {
 	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 }
 
+void print_ecards(card enemy_hand[], int n) {
+	printf("\n\n\n\n");
+	print_cards(enemy_hand, n, false);
+	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+}
+
 const char *get_points(int appearances, bool is_special, int *points) {
 	if (is_special && (appearances == 5)) {
 		*points += 12;

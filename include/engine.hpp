@@ -1,11 +1,9 @@
 #pragma once
 
-#include <iostream>
 #include <string>
-#include <cmath>
 
-const int WIDTH_SCREEN = 200;
-const int HEIGHT_SCREEN = 55;
+#define WIDTH_SCREEN 200
+#define HEIGHT_SCREEN 55
 
 // Ininitialize a character array with spaces
 void initialize_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN]);

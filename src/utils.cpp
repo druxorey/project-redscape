@@ -1,5 +1,5 @@
-#include <iostream>
 #include <chrono>
+#include <iostream>
 #include "../include/utils.hpp"
 
 void sleep(int miliseconds) {
@@ -16,17 +16,11 @@ void sleep(int miliseconds) {
 	}
 }
 
-
 void clear() {
 	system("clear");
 }
 
-
 void refresh(int rate) {
 	sleep(rate);
 	clear();
-}
-
-void enter() {
-	while (getchar() != '\n');
 }

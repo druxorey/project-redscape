@@ -1,7 +1,5 @@
 #pragma once
-
 #include <iostream>
-#include <chrono>
 
 // sleeps for the given miliseconds.
 void sleep(int miliseconds);
@@ -10,7 +8,8 @@ void sleep(int miliseconds);
 void clear();
 
 // reads the standard input until a newline character is found.
-void enter();
+#define enter while (getchar() != '\n');
 
 // refreshes the screen at the given rate.
 void refresh(int rate);
+
