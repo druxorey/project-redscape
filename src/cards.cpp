@@ -213,6 +213,7 @@ void print_cards(card c[], int n, bool numbers) {
 }
 
 void print_rcards(int n) {
+	clear();
 	int i, j;
 	int card_render_width = 16;
 	int padding = (MAXLINE - (n * card_render_width + n - 1)) / 2;
@@ -236,6 +237,7 @@ void print_rcards(int n) {
 }
 
 void print_ecards(card enemy_hand[], int n) {
+	clear();
 	printf("\n\n\n\n");
 	print_cards(enemy_hand, n, false);
 	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
