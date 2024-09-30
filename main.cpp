@@ -82,6 +82,33 @@ int main() {
 	refresh(2500);
 
 	// HERE STARTS THE FIRST FIGHT
+	if (combat("EL GENERAL: Vas a caer, mierda.", "EL GENERAL: Veamos que sacaste...")) {
+		// Si DEFAULT_NAME gana: BAD_GUY_1, con los dientes apretados, dice: "¡Solo has tenido suerte esta vez, mocosa! No te confíes."
+	}
+	else {
+		// Si BAD_GUY_1 gana: BAD_GUY_1 se ríe con crueldad y dice: "¡Lo ves! Aquí mandan los hombres de verdad, no las niñas como tú."
+	}		
+
+	if (combat("EL GENERAL: Ahora si te voy a partir, vas a ver.", "EL GENERAL: Adivina adivinador...")) {
+		// Si DEFAULT_NAME gana: BAD_GUY_2, frunciendo el ceño, dice: "¡No te creas tan importante! Solo has tenido un golpe de suerte."
+	}
+	else {
+		// Si BAD_GUY_2 gana: BAD_GUY_2 sonríe con superioridad y dice: "¡Así se hace! ¿Quién es la novata ahora?"
+	}
+
+	if (combat("EL GENERAL: No hay manera de que puedas conmigo.", "EL GENERAL: Qué cartas tienes...")) {
+		// Si DEFAULT_NAME gana: BAD_GUY_3, con voz ronca, dice: "¡No te confíes, mocosa! La próxima vez no tendrás tanta suerte."
+	}
+	else {
+		// Si BAD_GUY_3 gana: BAD_GUY_3 se ríe a carcajadas y dice: "¡Ves, hasta yo puedo ganarte! ¡Qué decepción!"
+	}		
+
+	if (combat("EL GENERAL: De esta no te escapas.", "EL GENERAL: Veamos qué cartas sacaste...")) {
+		// Si DEFAULT_NAME gana: BAD_GUY_4, con los ojos inyectados en sangre, dice: "¡Esto no ha terminado! Te haré pagar por esta humillación!"
+	}
+	else {
+		// Si BAD_GUY_4 gana: BAD_GUY_4 se jacta diciendo: "¡Soy el rey de este lugar! ¡Nadie me puede vencer!"
+	}		
 
 	process_dialog_scene("assets/el-general", 42, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -130,6 +157,7 @@ int main() {
 	// Frome here, the user has to fight 4 times, each time has to return a boolean to determine the dialogue and if it fails is a game over
 	
 	// HERE STARTS THE SECOND FIGHT
+	combat("ALEJANDRO BAAS: Pues bien, comencemos", "ALEJANDRO BAAS: Veamos que te salio preciosa...");
 
 	process_dialog_scene("assets/prisioner-1", 79, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -137,6 +165,7 @@ int main() {
 	refresh(2500);
 
 	// HERE STARTS THE THIRD FIGHT
+	combat("ALEJANDRO BAAS: Pues bien, comencemos", "ALEJANDRO BAAS: Veamos que te salio preciosa...");
 
 	process_dialog_scene("assets/prisioner-2", 81, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -144,6 +173,7 @@ int main() {
 	refresh(2500);
 	
 	// HERE STARTS THE FOURTH FIGHT
+	combat("ALEJANDRO BAAS: Pues bien, comencemos", "ALEJANDRO BAAS: Veamos que te salio preciosa...");
 
 	process_dialog_scene("assets/prisioner-3", 83, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -151,6 +181,7 @@ int main() {
 	refresh(2500);
 
 	// HERE STARTS THE FIFTH FIGHT
+	combat("ALEJANDRO BAAS: Pues bien, comencemos", "ALEJANDRO BAAS: Veamos que te salio preciosa...");
 
 	process_dialog_scene("assets/prisioner-4", 85, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
@@ -222,6 +253,7 @@ int main() {
 	refresh(2500);
 
 	// HERE STARTS THE SIXTH FIGHT
+	combat("LA VACA: Que comience el juego!", "LA VACA: La vida o la muerte, que sera?");
 
 	for (int i = 120; i <= 124; i++) {
 		process_prologue(dialog_matrix, i);
@@ -260,6 +292,7 @@ int main() {
 	refresh(2500);
 
 	// HERE STARTS THE SEVENTH FIGHT
+	combat("LA VACA: Que comience el juego!", "LA VACA: La vida o la muerte, que sera?");
 
 	for (int i = 141; i <= 142; i++) {
 		process_prologue(dialog_matrix, i);
@@ -298,6 +331,7 @@ int main() {
 	}
 
 	// HERE STARTS THE EIGHTHT FIGHT
+	combat("BARBARA: Una mocosa como tú no me va a jugar el kikiriwiki.", "BARBARA: jajaja...");
 
 	for (int i = 161; i <= 168; i++) {
 		process_prologue(dialog_matrix, i);
@@ -325,6 +359,7 @@ int main() {
 	refresh(2500);
 
 	// HERE STARTS THE NINTH FIGHT
+	combat("BARBARA: Una mocosa como tú no me va a jugar el kikiriwiki.", "BARBARA: jajaja...");
 
 	process_dialog_scene("assets/el-general", 179, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
