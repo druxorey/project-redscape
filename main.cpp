@@ -2,6 +2,7 @@
 #include "include/utils.hpp"
 #include "include/engine.hpp"
 #include "include/combats.hpp"
+#include "include/cutscenes.hpp"
 
 char first_character_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
 char second_character_matrix[HEIGHT_SCREEN][WIDTH_SCREEN];
@@ -282,6 +283,24 @@ int main() {
 	refresh(2500);
 	process_dialog_scene("assets/la-vaca", 136, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
+
+	/*
+
+	// SECOND ROUTE CHOOSE
+	process_dialog_scene("assets/la-vaca-choose", 136, 'd', second_character_matrix, dialog_matrix);
+	// The dialog is supposed to say somehing like "Entonces, que decides? si (Y) o no? (N)"
+	refresh(2500);
+	char c;
+	if ((c = getchar()) == 'Y' || c == 'y') {
+		// FIRST ROUTE
+	}
+	else {
+		// SECOND ROUTE
+	}
+
+	*/
+
+
 	process_dialog_scene("assets/la-vaca", 137, 'd', second_character_matrix, dialog_matrix);
 	refresh(2500);
 	process_dialog_scene("assets/mary/mary", 138, 'd', first_character_matrix, dialog_matrix);
