@@ -83,7 +83,7 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
         for(int horizontal = 0; horizontal < WIDTH_SCREEN; horizontal++) {
             std::string output;
             if (matrix[vertical][horizontal] == '{')
-                output = "╋";
+                output = "━";
             else if (matrix[vertical][horizontal] == '}')
                 output = "━";
             else if (matrix[vertical][horizontal] == '/')
