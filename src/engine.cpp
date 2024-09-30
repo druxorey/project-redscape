@@ -78,7 +78,19 @@ void print_matrix(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_code
 	for (int vertical = 0; vertical < HEIGHT_SCREEN; vertical++) {
 		for (int horizontal = 0; horizontal < WIDTH_SCREEN; horizontal++) {
 			std::string output;
-			if (matrix[vertical][horizontal] == '{')
+			if (vertical == 0 && horizontal == 0)
+                output = "╔";
+            else if (vertical == HEIGHT_SCREEN - 1 && horizontal == WIDTH_SCREEN - 1)
+                output = "╝";
+            else if (vertical == 0 && horizontal == WIDTH_SCREEN - 1)
+                output = "╗";
+            else if (vertical == HEIGHT_SCREEN - 1 && horizontal == 0)
+                output = "╚";
+            else if (vertical == 0 || vertical == HEIGHT_SCREEN - 1)
+                output = "═";
+            else if (horizontal == 0 || horizontal == WIDTH_SCREEN - 1)
+                output = "║";
+			else if (matrix[vertical][horizontal] == '{')
 				output = "━";
 			else if (matrix[vertical][horizontal] == '}')
 				output = "━";
@@ -162,6 +174,7 @@ void draw_dialog(char matrix[HEIGHT_SCREEN][WIDTH_SCREEN], std::string dialog, c
 	}
 }
 
+
 void process_dialog_scene(const std::string& scene_file, int dialog_index, char dialog_position, char principal_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes) {
 	std::string screen = get_cutscene(scene_file);
 	cutscene_to_matrix(screen, principal_matrix);
@@ -172,11 +185,13 @@ void process_dialog_scene(const std::string& scene_file, int dialog_index, char 
 	print_matrix(principal_matrix, use_escape_codes);
 }
 
+
 void process_visual_scene(const std::string& scene_file, char principal_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], bool use_escape_codes) {
 	std::string screen = get_cutscene(scene_file);
 	cutscene_to_matrix(screen, principal_matrix);
 	print_matrix(principal_matrix, use_escape_codes);
 }
+
 
 void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialog_index) {
 	clear();
@@ -187,6 +202,7 @@ void process_prologue(char dialog_matrix[HEIGHT_SCREEN][WIDTH_SCREEN], int dialo
 	sleep(1000);
 	enter
 }
+
 
 void process_title(std::string title_screen_location, bool use_escape_codes) {
 	FILE *file = fopen(title_screen_location.c_str(), "r");
