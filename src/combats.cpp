@@ -170,7 +170,7 @@ bool tutorial() {
 	return (points < enemy_points) ? true : false;
 }
 
-int first_combat() {
+int combat(const char *dialogue1, const char *dialogue2) {
 	// initialization of the game
 	card deck[DECKSIZE];
 	initialize_deck(deck);
@@ -186,7 +186,7 @@ int first_combat() {
 	clear();
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
-	print_dialogue("MARCELO: jajajaja, te voy a vaciar todo el prestigio.");
+	print_dialogue(dialogue1);
 	enter();
 
 	// asking the user to pick cards
@@ -226,7 +226,7 @@ int first_combat() {
 	clear();
 	print_rcards(HANDSIZE);
 	print_cards(player_hand, HANDSIZE, true);
-	print_dialogue("MARCELO: tsk, veamos.");
+	print_dialogue(dialogue2);
 	enter();
 
 	clear();
