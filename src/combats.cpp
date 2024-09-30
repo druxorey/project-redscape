@@ -298,6 +298,7 @@ bool combat(const char *dialogue1, const char *dialogue2) {
 
 	sprintf(total_points_dialogue, "Puntos de Marcelo: %d", points);
 	print_dialogue(total_points_dialogue);
+	clear();
 
 	return (points < enemy_points) ? true : false;
 }

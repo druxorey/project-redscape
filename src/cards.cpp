@@ -267,7 +267,7 @@ const char *get_points(int appearances, bool is_special, int *points) {
 	}
 	else if (!is_special && (appearances == 4)) {
 		*points += 5;
-		return "Cuádruple, 5 puntos.";
+		return "Cuadruple, 5 puntos. ";
 	}
 	else if (!is_special && (appearances == 3)) {
 		*points += 3;
