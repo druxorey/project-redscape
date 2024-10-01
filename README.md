@@ -8,8 +8,10 @@ To compile the program you can use the Makefile, but you need to have make insta
 You can use this method by typing "make all start". This will compile and execute the game.
 
 In case you don't have make, you can compile and run manually with g++, with this two commands:
-g++ -o build/redscape -Iinclude main.cpp src/cards.cpp src/cutscenes.cpp src/utils.cpp src/combats.cpp src/engine.cpp
-./build/redscape
+
+```bash
+g++ -o build/redscape -Iinclude main.cpp src/cards.cpp src/cutscenes.cpp src/utils.cpp src/combats.cpp src/engine.cpp ./build/redscape
+```
 
 ## Contribute
 If you want to add new functionalities or improve existing ones, follow these steps:
