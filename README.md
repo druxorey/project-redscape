@@ -10,7 +10,11 @@ You can use this method by typing "make all start". This will compile and execut
 In case you don't have make, you can compile and run manually with g++, with this two commands:
 
 ```bash
-g++ -o build/redscape -Iinclude main.cpp src/cards.cpp src/cutscenes.cpp src/utils.cpp src/combats.cpp src/engine.cpp ./build/redscape
+g++ -o build/redscape -Iinclude main.cpp src/cards.cpp src/cutscenes.cpp src/utils.cpp src/combats.cpp src/engine.cpp 
+```
+
+```bash
+./build/redscape
 ```
 
 ## Contribute
